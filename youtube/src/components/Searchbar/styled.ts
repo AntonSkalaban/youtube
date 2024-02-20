@@ -11,6 +11,9 @@ export const SearchButton = styled.button`
   height: 100%;
   background-color: #fff;
   border: 1px solid #c4c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledSearchBar = styled.div`
