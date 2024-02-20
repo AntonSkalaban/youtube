@@ -27,11 +27,6 @@ module.exports = (env) => {
                   loader: 'babel-loader',
                 }
               },
-              // {
-              //   test: /\.tsx?$/,
-              //   use: 'ts-loader',
-              //   exclude: /node_modules/,
-              // },
             ],
           },
           resolve: {
