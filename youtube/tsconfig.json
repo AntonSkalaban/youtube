@@ -15,9 +15,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "baseUrl": "src",
-    "paths": {
-      "components/*": ["components/*"]
-  }
-},
-  "include": ["src"]
+  },
+  "include": ["src/components", "src/custom.d.ts"]
 }

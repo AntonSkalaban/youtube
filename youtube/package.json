@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "babel-eslint": "8",
@@ -38,6 +39,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.8"
   }
 }

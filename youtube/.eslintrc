@@ -6,7 +6,11 @@
         "plugin:react/recommended",
         "prettier",
         "plugin:prettier/recommended"
-    ], 
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    },
     "rules": {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
@@ -15,7 +19,7 @@
         "react/display-name": "off",
         "react/jsx-indent-props": ["error", 2],
         "prettier/prettier": ["error", { "endOfLine": "auto" }],
-        "react/jsx-uses-react": "off",
+        "react/jsx-uses-react": "warn",
         "react/react-in-jsx-scope": "off"
       },
       "settings": {
@@ -25,6 +29,17 @@
       },
       "root": true,
       "globals": {
-        "document": true
+        "document": true,
+        "window": true,
+        "React": true,
+        "google": true,
+        "mount": true,
+        "mountWithRouter": true,
+        "shallow": true,
+        "shallowWithRouter": true,
+        "context": true,
+        "expect": true,
+        "jsdom": true,
+        "JSX": true
     }
   }
