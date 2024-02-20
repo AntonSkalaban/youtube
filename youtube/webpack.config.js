@@ -13,6 +13,14 @@ module.exports = (env) => {
       filename: "[name].[contenthash].js",
       clean: true,
     },
+    resolve: {
+      alias: {
+        assets: path.resolve(__dirname, "src/assets"),
+        components: path.resolve(__dirname, "src/components"),
+        pages: path.resolve(__dirname, "src/pages"),
+      },
+      extensions: [".tsx", ".ts", ".js"],
+    },
     module: {
       rules: [
         {
@@ -36,9 +44,6 @@ module.exports = (env) => {
           use: [{ loader: "@svgr/webpack", options: { icon: true } }],
         },
       ],
-    },
-    resolve: {
-      extensions: [".tsx", ".ts", ".js"],
     },
     devtool: isDev ? "inline-source-map" : false,
     devServer: isDev ? { port: 3000, open: true, hot: true } : undefined,
