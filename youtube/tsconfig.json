@@ -18,8 +18,10 @@
     "paths": {
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
-      "pages/*": ["pages/*"]
+      "pages/*": ["pages/*"],
+      "store/*": ["store/*"],
+      "const/*": ["const/*"],
    }
   },
-  "include": ["src/components", "src/custom.d.ts"]
+  "include": ["src", "src/custom.d.ts"]
 }
