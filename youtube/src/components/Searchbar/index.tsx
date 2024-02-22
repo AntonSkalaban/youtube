@@ -1,21 +1,33 @@
 import React, { ChangeEvent, useState } from "react";
 import { SearchButton, SearchInput, StyledSearchBar } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
+import { useDispatch } from "react-redux";
+import { changeTitle } from "store/slice/ParamsSlice";
 
 export const SearchBar: React.FC = () => {
   const [value, setValue] = useState("");
+  const dispatch = useDispatch();
 
   const hanldeChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
   const handleClick = () => {
-    console.log(value);
+    dispatch(changeTitle(value));
+  };
+
+  const hanldeKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") dispatch(changeTitle(value));
   };
 
   return (
     <StyledSearchBar>
-      <SearchInput onChange={hanldeChange} value={value} placeholder="Search..." />
+      <SearchInput
+        onChange={hanldeChange}
+        onKeyDown={hanldeKeyDown}
+        value={value}
+        placeholder="Search..."
+      />
       <SearchButton onClick={handleClick}>
         <SearchIcon />
       </SearchButton>

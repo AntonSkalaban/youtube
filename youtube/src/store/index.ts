@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { movieAPI } from "./api/MovieApi";
+import { videoAPI } from "./api/videoApi";
+import ParamsSlice from "./slice/ParamsSlice";
 
 export const store = configureStore({
   reducer: {
-    [movieAPI.reducerPath]: movieAPI.reducer,
+    params: ParamsSlice,
+    [videoAPI.reducerPath]: videoAPI.reducer,
   },
   middleware: (getDefaultMiddleware) => {
-    return getDefaultMiddleware().concat(movieAPI.middleware);
+    return getDefaultMiddleware().concat(videoAPI.middleware);
   },
 });
 

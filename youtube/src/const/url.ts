@@ -1,2 +1,5 @@
-export const url = "https://api.kinopoisk.dev/v1.4/movie";
-export const apiKey = "6PR5BY5-NYPM8N5-H6JQ8MG-GEAKPXA";
+export const url = "https://youtube-v31.p.rapidapi.com";
+export const headers = {
+  "X-RapidAPI-Key": "7b8907e6a0mshb70b72cf1bc429ep16e8cdjsn3bff73939070",
+  "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+};

@@ -4,6 +4,7 @@ export const SwitchInput = styled.input`
   height: 0;
   width: 0;
   visibility: hidden;
+  position: absolute;
 `;
 
 export const SwitchLabel = styled.label`

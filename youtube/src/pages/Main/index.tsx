@@ -1,19 +1,17 @@
 import React from "react";
 import { Header } from "components/Header";
+import { Content } from "components/Content";
+import { TabsSection } from "components/TabsSection";
 import { Wrapper } from "components/Wrapper";
-import { GlobalStyle } from "components/GlobalStyle/styled";
-import { movieAPI } from "../../store/api/MovieApi";
 
 export const Main = () => {
-  const { data, isError, isFetching } = movieAPI.useGetMoviesBySearchQuery({});
-
-  console.log(data, isError, isFetching);
   return (
     <>
-      {" "}
-      <GlobalStyle />
+      <Header />
+      <TabsSection />
       <Wrapper>
-        <Header />
+        {" "}
+        <Content />
       </Wrapper>
     </>
   );

@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const SearchInput = styled.input`
   width: 570px;
   height: 100%;
-  border: 1px solid #c4c4c4;
+  border: ${({ theme }) => theme.borders.grey};
 `;
 
 export const SearchButton = styled.button`
   width: 57px;
   height: 100%;
   background-color: #fff;
-  border: 1px solid #c4c4c4;
+  border: ${({ theme }) => theme.borders.grey};
   display: flex;
   align-items: center;
   justify-content: center;
