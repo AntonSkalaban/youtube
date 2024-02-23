@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 
 export const Title2 = styled.h2`
   font-family: Roboto;
@@ -21,4 +22,24 @@ export const Button = styled.button`
     opacity: 0.8;
     transition: opacity 0.5s;
   }
+`;
+
+const loadingAnimation = keyframes`
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }`;
+
+export const Skeleton = styled.div`
+  background-color: ${({ theme }) => theme.colors.grey};
+  animation: ${loadingAnimation} 3s infinite linear;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 400% 100%;
+`;
+
+export const SkeletonBlock = styled(Skeleton)<{ width?: string; height?: string }>`
+  width: ${({ width }) => width ?? "100%"};
+  height: ${({ height }) => height ?? "100%"};
 `;

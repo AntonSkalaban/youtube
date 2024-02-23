@@ -1,11 +1,11 @@
 import React from "react";
-import { VideosList } from "components/VideosList";
 import { videoAPI } from "store/api/videoApi";
-import { StyledContent } from "./style";
-import { Title2 } from "components/UI/styled";
 import { useSelector } from "react-redux";
 import { RootState } from "store/index";
 import { ShowMoreBtn } from "components/ShowMoreBtn";
+import { CardsContainer } from "components/CardsContainer";
+import { Title2 } from "components/UI/styled";
+import { StyledContent } from "./styled";
 
 export const Content: React.FC = () => {
   const { category, title, pageToken } = useSelector((state: RootState) => state.params);
@@ -15,10 +15,17 @@ export const Content: React.FC = () => {
     pageToken,
   });
 
-  if (isFetching)
+  if (isFetching && !data?.items?.length)
     return (
       <StyledContent>
-        <Title2>Fetching...</Title2>
+        <CardsContainer isFetching />
+      </StyledContent>
+    );
+
+  if (!isFetching && !data?.items?.length)
+    return (
+      <StyledContent>
+        <Title2>Not found(...</Title2>;
       </StyledContent>
     );
 
@@ -29,18 +36,14 @@ export const Content: React.FC = () => {
       </StyledContent>
     );
 
-  if (data && data?.items?.length > 0) {
-    console.log(data);
-    return (
-      <StyledContent>
-        <VideosList videos={data.items} />
-        <ShowMoreBtn pageToken={data.nextPageToken} />
-      </StyledContent>
-    );
-  }
   return (
     <StyledContent>
-      <Title2>Not found(...</Title2>;
+      {data && data?.items?.length > 0 && (
+        <>
+          <CardsContainer videos={data.items} isFetching={isFetching} />
+          {!isFetching && <ShowMoreBtn pageToken={data.nextPageToken} />}
+        </>
+      )}
     </StyledContent>
   );
 };

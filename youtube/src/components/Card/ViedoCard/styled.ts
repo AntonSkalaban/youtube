@@ -1,7 +1,7 @@
+import { Title2, Text } from "components/UI/styled";
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
-  /* max-width: 332px; */
   height: 283px;
 `;
 
@@ -9,8 +9,6 @@ export const StyledCardImgContainer = styled.div`
   width: 100%;
   height: 186px;
 `;
-
-export const StyledCardTextContainer = styled.div``;
 
 export const StyledCardDescription = styled.div`
   position: relative;
@@ -25,4 +23,16 @@ export const StyledAvatar = styled.img`
   position: absolute;
   top: 12px;
   left: 0;
+  border-radius: 50%;
+`;
+
+export const CardTitle = styled(Title2)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+export const CardText = styled(Text)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
