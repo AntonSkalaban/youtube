@@ -9,8 +9,8 @@ interface VideosListProps {
 export const VidoList: React.FC<VideosListProps> = ({ videos }) => {
   return (
     <>
-      {videos.map(({ id, snippet }, index) => {
-        return <VideoCard snippet={snippet} key={`${id.videoId}-${index}`} />;
+      {videos.map(({ id: { videoId }, snippet }, index) => {
+        return <VideoCard snippet={snippet} videoId={videoId} key={`${videoId}-${index}`} />;
       })}
     </>
   );

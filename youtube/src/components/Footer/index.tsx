@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
           <FooterNav>
             {icons.map(({ component, url }) => {
               return (
-                <a href="url" target="_blank" key={url}>
+                <a href={url} target="_blank" key={url} rel="noreferrer">
                   {component}
                 </a>
               );

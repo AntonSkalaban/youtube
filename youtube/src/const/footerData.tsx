@@ -10,7 +10,10 @@ export const titles = [
 ];
 
 export const icons = [
-  { component: <Facebook />, url: "https://www.facebook.com/ModsenSoftware/" },
+  {
+    component: <Facebook />,
+    url: "https://www.facebook.com/ModsenSoftware/",
+  },
   {
     component: <Twitter />,
     url: "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",

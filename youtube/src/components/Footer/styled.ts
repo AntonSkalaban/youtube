@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
 
   margin-top: 71px;
-  margin-left: 40px;
+  padding-left: 40px;
 `;
 
 export const FooterTextContainer = styled.div`
