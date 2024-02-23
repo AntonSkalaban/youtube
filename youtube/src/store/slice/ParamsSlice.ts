@@ -18,10 +18,12 @@ export const SearchParamsSlice = createSlice({
     changeTitle(state, action: PayloadAction<string>) {
       state.title = action.payload;
       state.category = "";
+      state.pageToken = "";
     },
     changeCategory(state, action: PayloadAction<string>) {
       state.category = action.payload;
       state.title = "";
+      state.pageToken = "";
     },
     changePage(state, action: PayloadAction<string>) {
       state.pageToken = action.payload;

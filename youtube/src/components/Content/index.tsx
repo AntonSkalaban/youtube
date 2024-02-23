@@ -15,7 +15,7 @@ export const Content: React.FC = () => {
     pageToken,
   });
 
-  if (isFetching && !data?.items?.length)
+  if (isFetching && !pageToken)
     return (
       <StyledContent>
         <CardsContainer isFetching />
