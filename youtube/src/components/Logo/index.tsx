@@ -1,12 +1,14 @@
 import React from "react";
-import { StyledLogo, Title } from "./styled";
+import { StyledLogo } from "./styled";
 import LogoIcon from "assets/svg/logo.svg";
+import { Title1 } from "components/UI/styled";
 
 export const Logo: React.FC = () => {
   return (
     <StyledLogo>
-      <LogoIcon height={"100%"} width={"29px"} />
-      <Title>ModsenFilms</Title>
+      <LogoIcon width={"29px"} height={"100%"} />
+
+      <Title1>ModsenFilms</Title1>
     </StyledLogo>
   );
 };

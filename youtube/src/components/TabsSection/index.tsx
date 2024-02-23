@@ -11,7 +11,6 @@ const categoryes = [
   { name: "documentary", value: "documentary" },
   { name: "music", value: "music" },
   { name: "sport", value: "sport" },
-  { name: "action and adventure", value: "action and adventure" },
 ];
 
 export const TabsSection: React.FC = () => {

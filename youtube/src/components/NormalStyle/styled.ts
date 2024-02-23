@@ -41,7 +41,7 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 article > * + * {

@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 
+export const Title1 = styled.h1`
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+`;
+
 export const Title2 = styled.h2`
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
 `;
 
 export const Text = styled.p<{ size?: number }>`
-  font-family: Roboto;
   font-size: ${({ size = 400 }) => size};
   font-weight: 400;
   line-height: 18px;

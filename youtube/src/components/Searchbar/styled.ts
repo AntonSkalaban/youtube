@@ -5,6 +5,10 @@ export const SearchInput = styled.input`
   height: 100%;
   border: ${({ theme }) => theme.borders.thin};
   border-color: ${({ theme }) => theme.colors.border};
+  padding-left: 15px;
+  &:focus {
+    outline-color: ${({ theme }) => theme.colors.orange};
+  }
 `;
 
 export const SearchButton = styled.button`
