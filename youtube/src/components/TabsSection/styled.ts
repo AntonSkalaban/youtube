@@ -1,11 +1,11 @@
 import { Button } from "components/UI/styled";
-import { Colors } from "const/themeType";
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
   height: 54px;
-  border-top: ${({ theme }) => theme.borders.grey};
-  border-bottom: ${({ theme }) => theme.borders.grey};
+  border-top: ${({ theme }) => theme.borders.thin};
+  border-bottom: ${({ theme }) => theme.borders.thin};
+  border-color: ${({ theme }) => theme.colors.border};
 `;
 
 export const TabsContainer = styled.div`
@@ -16,11 +16,15 @@ export const TabsContainer = styled.div`
   gap: 10px;
 `;
 
-export const StyledButton = styled(Button)<{ $bg: keyof Colors; color: keyof Colors }>`
+export const StyledButton = styled(Button)<{ $isActive: boolean }>`
   height: 30px;
+  background-color: ${({ theme, $isActive }) =>
+    theme.colors.tab[$isActive ? "active" : "default"].bg};
+
   border-radius: 15px;
-  background-color: ${({ theme, $bg }) => theme.colors[$bg]};
-  border: ${({ theme }) => theme.borders.grey};
+  border: ${({ theme }) => theme.borders.thin};
+  border-color: ${({ theme }) => theme.colors.border};
   padding: 0 26px 0 26px;
-  color: ${({ theme, color }) => theme.colors[color]};
+
+  color: ${({ theme, $isActive }) => theme.colors.tab[$isActive ? "active" : "default"].font};
 `;

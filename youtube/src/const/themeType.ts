@@ -8,7 +8,9 @@ export interface Colors {
 
 export interface Theme {
   colors: Colors;
+
   borders: {
-    grey: string;
+    thin: string;
+    normal: string;
   };
 }

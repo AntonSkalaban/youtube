@@ -15,6 +15,13 @@ export const Content: React.FC = () => {
     pageToken,
   });
 
+  if (isError)
+    return (
+      <StyledContent>
+        <Title2>Error...</Title2>
+      </StyledContent>
+    );
+
   if (isFetching && !pageToken)
     return (
       <StyledContent>
@@ -25,14 +32,7 @@ export const Content: React.FC = () => {
   if (!isFetching && !data?.items?.length)
     return (
       <StyledContent>
-        <Title2>Not found(...</Title2>;
-      </StyledContent>
-    );
-
-  if (isError)
-    return (
-      <StyledContent>
-        <Title2>Error...</Title2>
+        <Title2>Not found(...</Title2>
       </StyledContent>
     );
 

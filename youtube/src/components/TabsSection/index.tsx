@@ -27,15 +27,8 @@ export const TabsSection: React.FC = () => {
       <Wrapper>
         <TabsContainer>
           {categoryes.map(({ name, value }) => {
-            const isActive = category === value;
-
             return (
-              <StyledButton
-                $bg={isActive ? "black" : "white"}
-                color={isActive ? "white" : "black"}
-                onClick={hanldeClick(value)}
-                key={value}
-              >
+              <StyledButton $isActive={category === value} onClick={hanldeClick(value)} key={value}>
                 {name}
               </StyledButton>
             );
