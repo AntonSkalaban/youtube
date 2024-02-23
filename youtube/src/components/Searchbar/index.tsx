@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import { SearchButton, SearchInput, StyledSearchBar } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,11 +6,14 @@ import { changeTitle } from "store/slice/ParamsSlice";
 import { RootState } from "store/index";
 
 export const SearchBar: React.FC = () => {
-  const category = useSelector((state: RootState) => state.params);
+  const category = useSelector((state: RootState) => state.params.category);
 
-  console.log(category);
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (category !== "") setValue("");
+  }, [category]);
 
   const hanldeChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
