@@ -1,4 +1,4 @@
-import { Button } from "components/UI/styled";
+import { Button } from "components/styled/StyledComponents";
 import { styled } from "styled-components";
 
 export const StyledButton = styled(Button)`

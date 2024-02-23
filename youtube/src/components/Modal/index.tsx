@@ -7,10 +7,12 @@ import {
   ModalOverlay,
   ModalCloseIcon,
 } from "./styled";
+
 interface ModalProps {
   children: React.ReactNode;
   toggle: () => void;
 }
+
 export const Modal: React.FC<ModalProps> = ({ children, toggle }) => {
   return (
     <>

@@ -1,4 +1,4 @@
-import { Theme } from "const/themeType";
+import { Theme } from "types/themeType";
 import { DefaultTheme } from "styled-components";
 
 export enum ThemeEnum {

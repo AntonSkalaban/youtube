@@ -22,7 +22,8 @@
       "pages/*": ["pages/*"],
       "store/*": ["store/*"],
       "const/*": ["const/*"],
+      "types/*": ["types/*"],
    }
   },
-  "include": ["src", "src/react-app-env.d.ts"]
+  "include": ["src", "src/types/react-app-env.d.ts"]
 }

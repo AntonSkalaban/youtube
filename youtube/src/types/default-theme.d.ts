@@ -1,7 +1,7 @@
-import { Colors } from "const/themeType";
 import "styled-components";
 
-import { Theme } from "./const/themeType";
+import { Theme } from "./themeType";
+import { Colors } from "./themeType";
 
 export interface DefaultColors extends Colors {
   bg: string;
@@ -20,6 +20,7 @@ export interface DefaultColors extends Colors {
     };
   };
 }
+
 declare module "styled-components" {
   export interface DefaultTheme extends Theme {
     type: ThemeEnum;

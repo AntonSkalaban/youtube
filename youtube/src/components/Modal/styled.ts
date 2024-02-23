@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Button } from "components/UI/styled";
+import { Button } from "components/styled/StyledComponents";
 import CloseIcon from "assets/svg/close.svg";
 
 export const ModalOverlay = styled.section`

@@ -1,4 +1,6 @@
 import React from "react";
+import { icons, titles } from "const/footerData";
+import { Wrapper } from "components/Wrapper";
 import {
   BottomText,
   FooterContainer,
@@ -7,8 +9,6 @@ import {
   FooterTextContainer,
   StyledFooter,
 } from "./styled";
-import { Wrapper } from "components/Wrapper";
-import { icons, titles } from "const/footerData";
 
 export const Footer: React.FC = () => {
   return (

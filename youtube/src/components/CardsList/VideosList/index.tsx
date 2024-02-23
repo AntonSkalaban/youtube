@@ -1,5 +1,5 @@
 import React from "react";
-import { Video } from "const/types";
+import { Video } from "types/api";
 import { VideoCard } from "components/Card/ViedoCard";
 
 interface VideosListProps {

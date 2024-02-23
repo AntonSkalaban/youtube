@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "store/index";
 import { ShowMoreBtn } from "components/ShowMoreBtn";
 import { CardsContainer } from "components/CardsContainer";
-import { Title2 } from "components/UI/styled";
+import { Title2 } from "components/styled/StyledComponents";
 import { StyledContent } from "./styled";
 
 export const Content: React.FC = () => {

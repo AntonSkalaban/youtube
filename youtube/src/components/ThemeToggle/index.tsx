@@ -1,9 +1,9 @@
 import React from "react";
-import { SwitchInput, SwitchLabel, SwitchButton, ToggleContainer } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleThem } from "store/slice/ThemeSlice";
 import { RootState } from "store/index";
-import { ThemeEnum } from "components/Theme";
+import { ThemeEnum } from "components/styled/Theme";
+import { SwitchInput, SwitchLabel, SwitchButton, ToggleContainer } from "./styled";
 
 export const ThemeToggle: React.FC = () => {
   const dispath = useDispatch();

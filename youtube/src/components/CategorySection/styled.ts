@@ -1,14 +1,14 @@
-import { Button } from "components/UI/styled";
+import { Button } from "components/styled/StyledComponents";
 import styled from "styled-components";
 
-export const StyledSection = styled.section`
+export const CategoryContainer = styled.section`
   height: 54px;
   border-top: ${({ theme }) => theme.borders.thin};
   border-bottom: ${({ theme }) => theme.borders.thin};
   border-color: ${({ theme }) => theme.colors.border};
 `;
 
-export const TabsContainer = styled.div`
+export const CategoryButtonsContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@ export const TabsContainer = styled.div`
   gap: 10px;
 `;
 
-export const StyledButton = styled(Button)<{ $isActive: boolean }>`
+export const CategoryButton = styled(Button)<{ $isActive: boolean }>`
   height: 30px;
   background-color: ${({ theme, $isActive }) =>
     theme.colors.tab[$isActive ? "active" : "default"].bg};

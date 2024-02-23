@@ -1,4 +1,4 @@
-import { Title2 } from "components/UI/styled";
+import { Title2 } from "components/styled/StyledComponents";
 import { styled } from "styled-components";
 
 export const StyledFooter = styled.footer`

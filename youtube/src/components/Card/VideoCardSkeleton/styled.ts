@@ -1,9 +1,9 @@
-import { Skeleton } from "components/UI/styled";
-import { StyledCardImgContainer } from "components/Card/ViedoCard/styled";
+import { Skeleton } from "components/styled/StyledComponents";
+import { CardImgContainer } from "components/Card/ViedoCard/styled";
 import { styled } from "styled-components";
 
 export const CardImgSkeleton = styled(Skeleton)`
-  ${StyledCardImgContainer}
+  ${CardImgContainer}
 `;
 
 export const TextSkeletonContainer = styled.div`

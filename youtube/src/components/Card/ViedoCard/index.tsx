@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { VideoSnippet } from "const/types";
+import { VideoSnippet } from "types/api";
+import { Player } from "components/Player";
+import { Modal } from "components/Modal";
 import {
   CardText,
   CardTitle,
-  StyledAvatar,
-  StyledCard,
-  StyledCardDescription,
-  StyledCardImgContainer,
+  CardDescription,
+  CardImgContainer,
+  CardContainer,
+  CardImg,
+  CardAvatarContainer,
 } from "./styled";
-import Avatar from "assets/png/avatar.png";
-import { Player } from "components/Player";
-import { Modal } from "components/Modal";
+import AvatarImg from "assets/png/avatar.png";
 
 interface VideoCardProps {
   snippet: VideoSnippet;
@@ -24,21 +25,23 @@ export const VideoCard: React.FC<VideoCardProps> = ({ snippet, videoId }) => {
 
   return (
     <>
-      <StyledCard onClick={toggleModal}>
-        <StyledCardImgContainer>
-          <img src={thumbnails.medium.url} style={{ width: "100%", height: "100%" }} />
-        </StyledCardImgContainer>
+      <CardContainer onClick={toggleModal}>
+        <CardImgContainer>
+          <CardImg src={thumbnails.medium.url} />
+        </CardImgContainer>
 
-        <StyledCardDescription>
-          <StyledAvatar src={Avatar} />
+        <CardDescription>
+          <CardAvatarContainer>
+            <CardImg src={AvatarImg} />
+          </CardAvatarContainer>
           <div>
             <CardTitle>{title}</CardTitle>
             <CardText>
               {channelTitle} &#x2022; {new Date(publishTime).toLocaleDateString()}
             </CardText>
           </div>
-        </StyledCardDescription>
-      </StyledCard>
+        </CardDescription>
+      </CardContainer>
 
       {isPlayerOpen && (
         <Modal toggle={toggleModal}>

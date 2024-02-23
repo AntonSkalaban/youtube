@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { StyledButton } from "./styled";
 import { changePage } from "store/slice/ParamsSlice";
+import { StyledButton } from "./styled";
 
 interface ShowMoreBtnProps {
   pageToken: string;
