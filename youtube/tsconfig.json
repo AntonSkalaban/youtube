@@ -23,6 +23,7 @@
       "store/*": ["store/*"],
       "const/*": ["const/*"],
       "types/*": ["types/*"],
+      "utils/*": ["utils/*"],
    }
   },
   "include": ["src", "src/types/react-app-env.d.ts"]

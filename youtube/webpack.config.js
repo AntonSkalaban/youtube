@@ -22,6 +22,7 @@ module.exports = (env) => {
         store: path.resolve(__dirname, "src/store"),
         const: path.resolve(__dirname, "src/const"),
         types: path.resolve(__dirname, "src/types"),
+        utils: path.resolve(__dirname, "src/utils"),
       },
     },
     module: {

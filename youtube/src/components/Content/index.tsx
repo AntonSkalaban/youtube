@@ -5,7 +5,7 @@ import { RootState } from "store/index";
 import { ShowMoreBtn } from "components/ShowMoreBtn";
 import { CardsContainer } from "components/CardsContainer";
 import { Title2 } from "components/styled/StyledComponents";
-import { StyledContent } from "./styled";
+import { ContentContainer } from "./styled";
 
 export const Content: React.FC = () => {
   const { category, title, pageToken } = useSelector((state: RootState) => state.params);
@@ -17,33 +17,33 @@ export const Content: React.FC = () => {
 
   if (isError)
     return (
-      <StyledContent>
+      <ContentContainer>
         <Title2>Error...</Title2>
-      </StyledContent>
+      </ContentContainer>
     );
 
   if (isFetching && !pageToken)
     return (
-      <StyledContent>
+      <ContentContainer>
         <CardsContainer isFetching />
-      </StyledContent>
+      </ContentContainer>
     );
 
   if (!isFetching && !data?.items?.length)
     return (
-      <StyledContent>
+      <ContentContainer>
         <Title2>Not found(...</Title2>
-      </StyledContent>
+      </ContentContainer>
     );
 
   return (
-    <StyledContent>
+    <ContentContainer>
       {data && data?.items?.length > 0 && (
         <>
           <CardsContainer videos={data.items} isFetching={isFetching} />
           {!isFetching && <ShowMoreBtn pageToken={data.nextPageToken} />}
         </>
       )}
-    </StyledContent>
+    </ContentContainer>
   );
 };
