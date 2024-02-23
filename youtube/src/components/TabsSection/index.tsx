@@ -31,7 +31,7 @@ export const TabsSection: React.FC = () => {
 
             return (
               <StyledButton
-                bg={isActive ? "black" : "white"}
+                $bg={isActive ? "black" : "white"}
                 color={isActive ? "white" : "black"}
                 onClick={hanldeClick(value)}
                 key={value}
