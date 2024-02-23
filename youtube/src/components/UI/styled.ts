@@ -8,6 +8,12 @@ export const Title1 = styled.h1`
 `;
 
 export const Title2 = styled.h2`
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+`;
+
+export const Title3 = styled.h3`
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;

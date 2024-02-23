@@ -1,4 +1,4 @@
-import { Title2, Text } from "components/UI/styled";
+import { Title3, Text } from "components/UI/styled";
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
@@ -26,7 +26,7 @@ export const StyledAvatar = styled.img`
   border-radius: 50%;
 `;
 
-export const CardTitle = styled(Title2)`
+export const CardTitle = styled(Title3)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
