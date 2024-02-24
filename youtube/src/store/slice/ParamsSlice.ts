@@ -11,7 +11,7 @@ const initialState = {
   pageToken: "",
 };
 
-export const SearchParamsSlice = createSlice({
+export const ParamsSlice = createSlice({
   name: "params",
   initialState,
   reducers: {
@@ -29,8 +29,12 @@ export const SearchParamsSlice = createSlice({
       state.pageToken = action.payload;
     },
   },
+  selectors: {
+    getSearchParams: (state) => state,
+  },
 });
 
-export const { changeTitle, changeCategory, changePage } = SearchParamsSlice.actions;
+export const { changeTitle, changeCategory, changePage } = ParamsSlice.actions;
+export const { getSearchParams } = ParamsSlice.selectors;
 
-export default SearchParamsSlice.reducer;
+export default ParamsSlice.reducer;

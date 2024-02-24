@@ -1,14 +1,14 @@
 import React from "react";
 import { videoAPI } from "store/api/videoApi";
 import { useSelector } from "react-redux";
-import { RootState } from "store/index";
+import { getSearchParams } from "store/slice/ParamsSlice";
 import { ShowMoreBtn } from "components/ShowMoreBtn";
 import { CardsContainer } from "components/CardsContainer";
 import { Title2 } from "components/styled/StyledComponents";
 import { ContentContainer } from "./styled";
 
 export const Content: React.FC = () => {
-  const { category, title, pageToken } = useSelector((state: RootState) => state.params);
+  const { category, title, pageToken } = useSelector(getSearchParams);
 
   const { data, isFetching, isError } = videoAPI.useGetVideosQuery({
     q: category || title,

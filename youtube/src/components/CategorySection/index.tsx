@@ -1,17 +1,17 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { changeCategory } from "store/slice/ParamsSlice";
-import { RootState } from "store/index";
-import { CategoryContainer, CategoryButtonsContainer, CategoryButton } from "./styled";
-import { Wrapper } from "components/Wrapper";
+import { useSelector } from "react-redux";
+import { getSearchParams } from "store/slice/ParamsSlice";
+import { useActions } from "utils/hooks/useActions";
 import { categoryes } from "const/categoryesData";
+import { Wrapper } from "components/Wrapper";
+import { CategoryContainer, CategoryButtonsContainer, CategoryButton } from "./styled";
 
 export const CategorySection: React.FC = () => {
-  const dispatch = useDispatch();
-  const category = useSelector((state: RootState) => state.params.category);
+  const category = useSelector(getSearchParams).category;
+  const { changeCategory } = useActions();
 
   const hanldeClick = (category: string) => () => {
-    dispatch(changeCategory(category === "all" ? "" : category));
+    changeCategory(category === "all" ? "" : category);
   };
 
   return (

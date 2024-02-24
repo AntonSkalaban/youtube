@@ -1,15 +1,15 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { changePage } from "store/slice/ParamsSlice";
+import { useActions } from "utils/hooks/useActions";
 import { StyledButton } from "./styled";
-
 interface ShowMoreBtnProps {
   pageToken: string;
 }
+
 export const ShowMoreBtn: React.FC<ShowMoreBtnProps> = ({ pageToken }) => {
-  const dispatch = useDispatch();
+  const { changePage } = useActions();
+
   const handleClick = () => {
-    dispatch(changePage(pageToken));
+    changePage(pageToken);
   };
   return <StyledButton onClick={handleClick}>Show More</StyledButton>;
 };

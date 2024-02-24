@@ -1,15 +1,15 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { getSearchParams } from "store/slice/ParamsSlice";
+import { useActions } from "utils/hooks/useActions";
 import { SearchButton, SearchInput, StyledSearchBar } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { changeTitle } from "store/slice/ParamsSlice";
-import { RootState } from "store/index";
 
 export const SearchBar: React.FC = () => {
-  const category = useSelector((state: RootState) => state.params.category);
+  const category = useSelector(getSearchParams).category;
+  const { changeTitle } = useActions();
 
   const [value, setValue] = useState("");
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (category !== "") setValue("");
@@ -19,12 +19,10 @@ export const SearchBar: React.FC = () => {
     setValue(e.target.value);
   };
 
-  const handleClick = () => {
-    dispatch(changeTitle(value));
-  };
+  const handleClick = () => changeTitle(value);
 
   const hanldeKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") dispatch(changeTitle(value));
+    if (e.key === "Enter") changeTitle(value);
   };
 
   return (

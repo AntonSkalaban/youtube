@@ -7,15 +7,19 @@ const initialState: { theme: DefaultTheme } = {
 };
 
 export const ThemeSlice = createSlice({
-  name: "them",
+  name: "theme",
   initialState,
   reducers: {
     toggleThem: (state) => {
       state.theme = state.theme.type === ThemeEnum.light ? darkTheme : lightTheme;
     },
   },
+  selectors: {
+    getTheme: (state) => state.theme,
+  },
 });
 
 export const { toggleThem } = ThemeSlice.actions;
+export const { getTheme } = ThemeSlice.selectors;
 
 export default ThemeSlice.reducer;
