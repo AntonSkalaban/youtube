@@ -5,7 +5,7 @@ import { CategorySection } from "components/CategorySection";
 import { Wrapper } from "components/Wrapper";
 import { Footer } from "components/Footer";
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
     <>
       <Header />

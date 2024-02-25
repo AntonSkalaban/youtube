@@ -11,7 +11,7 @@ export const CategorySection: React.FC = () => {
   const { changeCategory } = useActions();
 
   const hanldeClick = (category: string) => () => {
-    changeCategory(category === "all" ? "" : category);
+    changeCategory(category === "All" ? "" : category);
   };
 
   return (

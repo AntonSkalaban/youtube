@@ -27,17 +27,17 @@ export const VideoCard: React.FC<VideoCardProps> = ({ snippet, videoId }) => {
     <>
       <CardContainer onClick={toggleModal}>
         <CardImgContainer>
-          <CardImg src={thumbnails.medium.url} />
+          <CardImg src={thumbnails.high.url} />
         </CardImgContainer>
 
         <CardDescription>
           <CardAvatarContainer>
-            <CardImg src={AvatarImg} />
+            <CardImg src={AvatarImg} alt="video-img" />
           </CardAvatarContainer>
           <div>
             <CardTitle>{title}</CardTitle>
             <CardText>
-              {channelTitle} &#x2022; {new Date(publishTime).toLocaleDateString()}
+              {channelTitle} &#x2022; {new Date(publishTime).getFullYear()}
             </CardText>
           </div>
         </CardDescription>

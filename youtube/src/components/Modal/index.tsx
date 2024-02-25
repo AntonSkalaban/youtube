@@ -4,9 +4,10 @@ import {
   CloseModalBtn,
   ModalContainer,
   ModalContent,
-  ModalOverlay,
+  // ModalOverlay,
   ModalCloseIcon,
 } from "./styled";
+import { Overlay } from "components/styled";
 
 interface ModalProps {
   children: React.ReactNode;
@@ -17,14 +18,17 @@ export const Modal: React.FC<ModalProps> = ({ children, toggle }) => {
   return (
     <>
       {createPortal(
-        <ModalOverlay>
+        <>
+          <Overlay />
+          {/* <ModalOverlay> */}
           <ModalContainer>
             <CloseModalBtn onClick={toggle}>
               <ModalCloseIcon />
             </CloseModalBtn>
             <ModalContent>{children}</ModalContent>
           </ModalContainer>
-        </ModalOverlay>,
+          {/* </ModalOverlay> */}
+        </>,
         document.body
       )}
     </>

@@ -11,18 +11,28 @@ export const Title2 = styled.h2`
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
+  @media ${({ theme }) => theme.media.small} {
+    font-size: 14px;
+    line-height: 16px;
+  }
 `;
 
 export const Title3 = styled.h3`
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+  @media ${({ theme }) => theme.media.small} {
+    font-size: 14px;
+  }
 `;
 
 export const Text = styled.p<{ size?: number }>`
   font-size: ${({ size = 400 }) => size};
   font-weight: 400;
   line-height: 18px;
+  @media ${({ theme }) => theme.media.small} {
+    font-size: 14px;
+  }
 `;
 
 export const Button = styled.button`
@@ -52,4 +62,15 @@ export const Skeleton = styled.div`
 export const SkeletonBlock = styled(Skeleton)<{ width?: string; height?: string }>`
   width: ${({ width }) => width ?? "100%"};
   height: ${({ height }) => height ?? "100%"};
+`;
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  background-color: rgb(0, 0, 0, 0.5);
 `;

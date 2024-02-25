@@ -19,12 +19,19 @@ export const ModalContainer = styled.section`
   padding-top: 25px;
   background-color: ${({ theme }) => theme.colors.border};
 
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 500;
   transform: translate(-50%, -50%);
   background-color: ${({ theme }) => theme.colors.bg};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  @media ${({ theme }) => theme.media.small} {
+    width: 100%;
+  }
+  @media ${({ theme }) => theme.media.extasmall} {
+    height: 230px;
+  }
 `;
 
 export const CloseModalBtn = styled(Button)`

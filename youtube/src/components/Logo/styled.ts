@@ -8,6 +8,12 @@ export const LogoContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 6px;
+  @media ${({ theme }) => theme.media.medium} {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  @media ${({ theme }) => theme.media.extasmall} {
+    gap: 0;
+  }
 `;
 
 export const LogoIcon = styled(Logo)`

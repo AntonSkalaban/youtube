@@ -2,7 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getSearchParams } from "store/slice/ParamsSlice";
 import { useActions } from "utils/hooks/useActions";
-import { SearchButton, SearchInput, StyledSearchBar } from "./styled";
+import { SearchButton, SearchInput, SearchBarContainer } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
 
 export const SearchBar: React.FC = () => {
@@ -26,7 +26,7 @@ export const SearchBar: React.FC = () => {
   };
 
   return (
-    <StyledSearchBar>
+    <SearchBarContainer>
       <SearchInput
         onChange={hanldeChange}
         onKeyDown={hanldeKeyDown}
@@ -36,6 +36,6 @@ export const SearchBar: React.FC = () => {
       <SearchButton onClick={handleClick}>
         <SearchIcon />
       </SearchButton>
-    </StyledSearchBar>
+    </SearchBarContainer>
   );
 };

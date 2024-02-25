@@ -13,4 +13,13 @@ export interface Theme {
     thin: string;
     normal: string;
   };
+
+  media: {
+    extraLarge: string;
+    large: string;
+    medium: string;
+    small: string;
+    extasmall: string;
+    xxs: string;
+  };
 }

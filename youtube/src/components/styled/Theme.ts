@@ -19,6 +19,15 @@ export const baseTheme: Theme = {
     thin: "1px solid",
     normal: "2px solid",
   },
+
+  media: {
+    extraLarge: "(max-width: 1400px)",
+    large: "(max-width: 1220px)",
+    medium: "(max-width: 880px)",
+    small: "(max-width: 660px)",
+    extasmall: "(max-width: 500px)",
+    xxs: "(max-width: 340px)",
+  },
 };
 
 export const lightTheme: DefaultTheme = {
@@ -33,7 +42,7 @@ export const lightTheme: DefaultTheme = {
 
     tab: {
       default: {
-        bg: "#fff",
+        bg: "rgba(0, 0, 0, 0.1)",
         font: "#000",
       },
 

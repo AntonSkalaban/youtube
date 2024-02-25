@@ -1,5 +1,5 @@
 import React from "react";
-import { icons, titles } from "const/footerData";
+import { icons } from "const/footerData";
 import { Wrapper } from "components/Wrapper";
 import {
   BottomText,
@@ -7,32 +7,41 @@ import {
   FooterNav,
   FooterText,
   FooterTextContainer,
-  StyledFooter,
+  FooterWrapper,
+  FooterLink,
 } from "./styled";
 
 export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <FooterWrapper>
       <Wrapper>
         <FooterContainer>
           <FooterTextContainer>
-            {titles.map((title) => {
-              return <FooterText key={title}>{title}</FooterText>;
-            })}
+            <FooterText>
+              TermsPrivacyPolicy & Safety <br />
+              How YouTube works <br />
+              Test new features
+            </FooterText>
+
+            <FooterText>
+              About Press Copyright <br />
+              Contact us Creators <br />
+              Advertise Developers
+            </FooterText>
           </FooterTextContainer>
 
           <FooterNav>
             {icons.map(({ component, url }) => {
               return (
-                <a href={url} target="_blank" key={url} rel="noreferrer">
+                <FooterLink href={url} target="_blank" key={url} rel="noreferrer">
                   {component}
-                </a>
+                </FooterLink>
               );
             })}
           </FooterNav>
         </FooterContainer>
         <BottomText>2023 Modsen company</BottomText>
       </Wrapper>
-    </StyledFooter>
+    </FooterWrapper>
   );
 };

@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const ToggleContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-`;
-
 export const SwitchInput = styled.input`
   height: 0;
   width: 0;
@@ -47,5 +41,8 @@ export const SwitchButton = styled.span`
 
   ${SwitchLabel}:active & {
     width: 45px;
+  }
+  &:hover {
+    background: ${({ theme }) => theme.colors.orange};
   }
 `;

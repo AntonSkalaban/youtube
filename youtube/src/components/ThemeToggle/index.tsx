@@ -1,24 +1,23 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleThem } from "store/slice/ThemeSlice";
-import { RootState } from "store/index";
+import { useSelector } from "react-redux";
+import { getThemeType } from "store/slice/ThemeSlice";
+import { useActions } from "utils/hooks/useActions";
 import { ThemeEnum } from "components/styled/Theme";
-import { SwitchInput, SwitchLabel, SwitchButton, ToggleContainer } from "./styled";
-
+import { SwitchInput, SwitchLabel, SwitchButton } from "./styled";
 export const ThemeToggle: React.FC = () => {
-  const dispath = useDispatch();
-  const themeType = useSelector((state: RootState) => state.theme.theme.type);
+  const themeType = useSelector(getThemeType);
+  const { toggleThem } = useActions();
   return (
-    <ToggleContainer>
+    <>
       <SwitchInput
         id={"theme-toggle"}
         type="checkbox"
         checked={themeType === ThemeEnum.light}
-        onChange={() => dispath(toggleThem())}
+        onChange={() => toggleThem()}
       />
       <SwitchLabel className="switch-label" htmlFor={"theme-toggle"}>
         <SwitchButton className="switch-button" />
       </SwitchLabel>
-    </ToggleContainer>
+    </>
   );
 };

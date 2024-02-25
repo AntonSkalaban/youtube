@@ -16,10 +16,11 @@ export const ThemeSlice = createSlice({
   },
   selectors: {
     getTheme: (state) => state.theme,
+    getThemeType: (state) => state.theme.type,
   },
 });
 
 export const { toggleThem } = ThemeSlice.actions;
-export const { getTheme } = ThemeSlice.selectors;
+export const { getTheme, getThemeType } = ThemeSlice.selectors;
 
 export default ThemeSlice.reducer;
