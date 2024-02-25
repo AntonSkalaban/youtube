@@ -1,4 +1,5 @@
 import React from "react";
+import { ErrorBoundary } from "components/ErrorBoundary";
 import { Header } from "components/Header";
 import { Content } from "components/Content";
 import { CategorySection } from "components/CategorySection";
@@ -7,7 +8,7 @@ import { Footer } from "components/Footer";
 
 export const Main: React.FC = () => {
   return (
-    <>
+    <ErrorBoundary>
       <Header />
       <CategorySection />
       <Wrapper>
@@ -15,6 +16,6 @@ export const Main: React.FC = () => {
         <Content />
       </Wrapper>
       <Footer />
-    </>
+    </ErrorBoundary>
   );
 };
