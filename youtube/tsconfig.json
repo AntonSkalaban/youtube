@@ -24,6 +24,7 @@
       "const/*": ["const/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"],
+      "tests/*": ["tests/*"],
    }
   },
   "include": ["src", "src/types/react-app-env.d.ts"]

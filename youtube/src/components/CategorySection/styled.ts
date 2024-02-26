@@ -35,7 +35,6 @@ export const CategoryButtonsContainer = styled.div`
   gap: 8px;
   @media ${({ theme }) => theme.media.small} {
     grid-template-rows: repeat(2, 30px);
-
     grid-auto-flow: column dense;
 
     justify-content: start;
