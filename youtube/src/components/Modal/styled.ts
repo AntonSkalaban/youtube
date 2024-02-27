@@ -43,7 +43,7 @@ export const CloseModalBtn = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: red;
   border-radius: 50%;
   &:hover {
     background-color: ${({ theme }) => theme.colors.lightGrey};
