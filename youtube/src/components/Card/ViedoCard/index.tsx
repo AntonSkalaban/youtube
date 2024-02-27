@@ -25,7 +25,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ snippet, videoId }) => {
 
   return (
     <>
-      <CardContainer onClick={toggleModal}>
+      <CardContainer onClick={toggleModal} data-testid="video-card">
         <CardImgContainer>
           <CardImg src={thumbnails.high.url} />
         </CardImgContainer>

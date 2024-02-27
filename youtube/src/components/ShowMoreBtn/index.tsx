@@ -11,5 +11,9 @@ export const ShowMoreBtn: React.FC<ShowMoreBtnProps> = ({ pageToken }) => {
   const handleClick = () => {
     changePage(pageToken);
   };
-  return <StyledButton onClick={handleClick}>Show More</StyledButton>;
+  return (
+    <StyledButton data-testid="show-more" onClick={handleClick}>
+      Show More
+    </StyledButton>
+  );
 };

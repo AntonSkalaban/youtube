@@ -1,11 +1,11 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { act, fireEvent } from "@testing-library/react";
-import { SearchBar } from "components/Searchbar";
-import { renderWithProviders, setupStore } from "./test-util";
-import { ThemeProvider } from "styled-components";
-import { darkTheme } from "components/styled/Theme";
 import { changeCategory } from "store/slice/ParamsSlice";
+import { renderWithProviders, setupStore } from "./util/test-util";
+import { ThemeProvider } from "styled-components";
+import { SearchBar } from "components/Searchbar";
+import { darkTheme } from "components/styled/Theme";
 
 const theme = darkTheme;
 
@@ -20,9 +20,9 @@ test("Input works", () => {
 
   const input = getByPlaceholderText("Search...") as HTMLInputElement;
 
-  fireEvent.change(input, { target: { value: "Тестовий запит" } });
+  fireEvent.change(input, { target: { value: "some message" } });
 
-  expect(input.value).toBe("Тестовий запит");
+  expect(input.value).toBe("some message");
   expect(store.getState().params.title).toEqual("");
 });
 
@@ -39,10 +39,10 @@ test("Should change the global state", () => {
 
   const input = getByPlaceholderText("Search...") as HTMLInputElement;
 
-  fireEvent.change(input, { target: { value: "Тестовий запит" } });
+  fireEvent.change(input, { target: { value: "some message" } });
   fireEvent.keyDown(input, { key: "Enter", code: "Enter", charCode: 13 });
 
-  expect(store.getState().params.title).toEqual("Тестовий запит");
+  expect(store.getState().params.title).toEqual("some message");
 });
 
 test("Should reset value when changing category", () => {
@@ -59,7 +59,7 @@ test("Should reset value when changing category", () => {
   const input = getByPlaceholderText("Search...") as HTMLInputElement;
 
   act(() => {
-    fireEvent.change(input, { target: { value: "Тестовий запит" } });
+    fireEvent.change(input, { target: { value: "some message" } });
     fireEvent.keyDown(input, { key: "Enter", code: "Enter", charCode: 13 });
     store.dispatch(changeCategory("sport"));
   });

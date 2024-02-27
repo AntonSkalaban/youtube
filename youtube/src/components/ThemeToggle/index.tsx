@@ -11,12 +11,13 @@ export const ThemeToggle: React.FC = () => {
     <>
       <SwitchInput
         id={"theme-toggle"}
+        data-testid={"theme-toggle"}
         type="checkbox"
         checked={themeType === ThemeEnum.light}
         onChange={() => toggleThem()}
       />
-      <SwitchLabel className="switch-label" htmlFor={"theme-toggle"}>
-        <SwitchButton className="switch-button" />
+      <SwitchLabel htmlFor={"theme-toggle"}>
+        <SwitchButton />
       </SwitchLabel>
     </>
   );

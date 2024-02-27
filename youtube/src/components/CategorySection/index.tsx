@@ -21,6 +21,7 @@ export const CategorySection: React.FC = () => {
           {categoryes.map(({ name, value }) => {
             return (
               <CategoryButton
+                data-testid={name}
                 $isActive={category === value}
                 onClick={hanldeClick(value)}
                 key={value}

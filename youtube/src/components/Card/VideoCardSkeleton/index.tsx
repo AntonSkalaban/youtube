@@ -10,7 +10,7 @@ import {
 
 export const VideoCardSkeleton: React.FC = () => {
   return (
-    <CardContainer>
+    <CardContainer data-testid="skeleton-card">
       <CardImgContainer as={Skeleton} />
       <CardDescription>
         <CardAvatarContainer as={Skeleton} />

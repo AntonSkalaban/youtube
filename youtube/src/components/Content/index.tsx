@@ -32,7 +32,7 @@ export const Content: React.FC = () => {
   if (!isFetching && !data?.items?.length)
     return (
       <ContentContainer>
-        <Title2>Not found(...</Title2>
+        <Title2>Not found...</Title2>
       </ContentContainer>
     );
 

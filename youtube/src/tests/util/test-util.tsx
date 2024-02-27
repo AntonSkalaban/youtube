@@ -5,16 +5,22 @@ import { Provider } from "react-redux";
 
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import ParamsSlice from "store/slice/ParamsSlice";
+import ThemeSlice from "store/slice/ThemeSlice";
+import { videoAPI } from "store/api/videoApi";
 
-// Create the root reducer separately so we can extract the RootState type
 const rootReducer = combineReducers({
   params: ParamsSlice,
+  theme: ThemeSlice,
+  [videoAPI.reducerPath]: videoAPI.reducer,
 });
 
 export const setupStore = (preloadedState?: Partial<RootState>) => {
   return configureStore({
     reducer: rootReducer,
     preloadedState,
+    middleware: (getDefaultMiddleware) => {
+      return getDefaultMiddleware().concat(videoAPI.middleware);
+    },
   });
 };
 
@@ -22,9 +28,6 @@ export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;
 export type AppDispatch = AppStore["dispatch"];
 
-// ////////////////////
-// This type interface extends the default options for render from RTL, as well
-// as allows the user to specify other things such as initialState, store.
 interface ExtendedRenderOptions extends Omit<RenderOptions, "queries"> {
   preloadedState?: Partial<RootState>;
   store?: AppStore;
