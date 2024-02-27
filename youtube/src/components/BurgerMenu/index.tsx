@@ -13,7 +13,7 @@ export const BurgerMenu: React.FC<BurgerMenuProsp> = ({ children }) => {
     <>
       <BurgerIconContainer>
         <BurgerIcon $isOpen={isOpen} onClick={toggle}>
-          <span data-testid="burger-span" />
+          <span />
           <span />
           <span />
         </BurgerIcon>

@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { getSearchParams } from "store/slice/ParamsSlice";
-import { useActions } from "utils/hooks/useActions";
+import { getSearchParams } from "store/slice";
+import { useActions } from "utils/hooks";
 import { SearchButton, SearchInput, SearchBarContainer } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
 

@@ -15,6 +15,3 @@
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     }
   }
-  // configure: (jestConfig, { env, paths, resolve, rootDir }) => {
-  //   jestConfig.setupFiles = [``];
-  //   return jestConfig;

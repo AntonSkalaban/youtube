@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { videoAPI } from "./api/videoApi";
-import ThemeSlice from "./slice/ThemeSlice";
-import ParamsSlice from "./slice/ParamsSlice";
+import { videoAPI } from "./api";
+import { ThemeSlice, ParamsSlice } from "./slice";
 
 export const store = configureStore({
   reducer: {

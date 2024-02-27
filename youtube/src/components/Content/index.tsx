@@ -1,7 +1,7 @@
 import React from "react";
 import { videoAPI } from "store/api/videoApi";
 import { useSelector } from "react-redux";
-import { getSearchParams } from "store/slice/ParamsSlice";
+import { getSearchParams } from "store/slice";
 import { ShowMoreBtn } from "components/ShowMoreBtn";
 import { CardsContainer } from "components/CardsContainer";
 import { Title2 } from "components/styled/StyledComponents";

@@ -1,7 +1,6 @@
 import { bindActionCreators } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
-import { changeCategory, changePage, changeTitle } from "store/slice/ParamsSlice";
-import { toggleThem } from "store/slice/ThemeSlice";
+import { changeCategory, changePage, changeTitle, toggleThem } from "store/slice";
 
 const actions = { changeCategory, changePage, changeTitle, toggleThem };
 

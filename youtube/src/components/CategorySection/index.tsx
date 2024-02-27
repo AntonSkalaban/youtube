@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { getSearchParams } from "store/slice/ParamsSlice";
-import { useActions } from "utils/hooks/useActions";
-import { categoryes } from "const/categoryesData";
+import { getSearchParams } from "store/slice";
+import { useActions } from "utils/hooks";
+import { categoryes } from "const";
 import { Wrapper } from "components/Wrapper";
 import { CategoryContainer, CategoryButtonsContainer, CategoryButton } from "./styled";
 
