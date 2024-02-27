@@ -1,0 +1,17 @@
+{
+    "bail": 1,
+    "verbose": true,
+        "rootDir": "./",
+        "modulePaths": [
+          "<rootDir>"
+        ],
+        "testEnvironment": "jsdom",
+        "resolver": "<rootDir>/resolver.js",
+    "moduleDirectories": ["node_modules", "src"],
+    "setupFilesAfterEnv": ["jest-styled-components", "<rootDir>/jest.polyfills.js" ],
+    "transform": {
+      "^.+\\.tsx?$": "babel-jest",
+      "^.+\\.svg$": "jest-transformer-svg",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    }
+  }
