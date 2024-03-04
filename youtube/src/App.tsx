@@ -6,7 +6,6 @@ import { FontStyles, GlobalStyle, NormalStyle } from "components/styled";
 import { Main } from "pages/Main";
 
 export const App: React.FC = () => {
-  console.log(getTheme);
   const theme = useSelector(getTheme);
 
   return (

@@ -9,7 +9,10 @@ export const useElasticSearch = (value: string) => {
   const { data, isFetching } = videoAPI.useGetVideosTitlesQuery(debouncedValue);
 
   const possibleNames = useMemo(
-    () => Array.from(new Set(getPossibleNames(data, debouncedValue))).splice(0, 10),
+    () =>
+      debouncedValue
+        ? Array.from(new Set(getPossibleNames(data, debouncedValue))).splice(0, 10)
+        : [],
     [data, debouncedValue]
   );
 
