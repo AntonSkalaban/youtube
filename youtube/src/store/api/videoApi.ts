@@ -1,11 +1,15 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { url, headers } from "const/apiData";
 import { ApiResponse, Video, VideoData } from "types";
+
+const headers = {
+  "X-RapidAPI-Key": process.env.API_KEY,
+  "X-RapidAPI-Host": process.env.API_HOST,
+};
 
 export const videoAPI = createApi({
   reducerPath: "videoAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: url,
+    baseUrl: process.env.API_URL,
   }),
   endpoints: (build) => ({
     getVideos: build.query<VideoData, { q: string; pageToken?: string }>({
