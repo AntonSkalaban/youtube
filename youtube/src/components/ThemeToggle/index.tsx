@@ -12,7 +12,7 @@ export const ThemeToggle: React.FC = () => {
   const handleChange = () => {
     const theme = themeType === ThemeEnum.light ? darkTheme : lightTheme;
     setTheme(theme);
-    localStorage.setItem("themeType", themeType);
+    localStorage.setItem("themeType", theme.type);
   };
 
   return (
