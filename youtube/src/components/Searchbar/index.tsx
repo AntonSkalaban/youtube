@@ -4,6 +4,7 @@ import { getSearchParams } from "store/slice";
 import { useActions } from "utils/hooks";
 import { SearchButton, SearchInput, SearchBarContainer } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
+import { SearchTips } from "./SearchTips";
 
 export const SearchBar: React.FC = () => {
   const category = useSelector(getSearchParams).category;
@@ -33,6 +34,7 @@ export const SearchBar: React.FC = () => {
         value={value}
         placeholder="Search..."
       />
+      <SearchTips value={value} hanldeSelect={setValue} />
       <SearchButton onClick={handleClick}>
         <SearchIcon />
       </SearchButton>

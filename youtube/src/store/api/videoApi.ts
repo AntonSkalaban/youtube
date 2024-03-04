@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { url, headers } from "const/apiData";
-import { ApiResponse, VideoData } from "types/api";
+import { ApiResponse, Video, VideoData } from "types";
 
 export const videoAPI = createApi({
   reducerPath: "videoAPI",
@@ -43,6 +43,23 @@ export const videoAPI = createApi({
       forceRefetch({ currentArg, previousArg }) {
         return currentArg !== previousArg;
       },
+    }),
+
+    getVideosTitles: build.query<Video[], string>({
+      query: (title) => {
+        const maxResults = 40;
+        return {
+          url: `/search`,
+          headers,
+          params: {
+            q: title,
+            part: "snippet",
+            regionCode: "US",
+            maxResults,
+          },
+        };
+      },
+      transformResponse: (response: ApiResponse) => response.items,
     }),
   }),
 });

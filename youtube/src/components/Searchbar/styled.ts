@@ -4,6 +4,7 @@ export const SearchBarContainer = styled.div`
   width: 627px;
   height: 38px;
   display: flex;
+  position: relative;
   @media ${({ theme }) => theme.media.extraLarge} {
     width: 600px;
   }
@@ -26,6 +27,7 @@ export const SearchInput = styled.input`
   border: ${({ theme }) => theme.borders.thin};
   border-color: ${({ theme }) => theme.colors.border};
   padding-left: 15px;
+
   &:focus {
     outline-color: ${({ theme }) => theme.colors.orange};
   }
