@@ -1,4 +1,3 @@
-import React from "react";
 import { Video } from "types/api";
 import { VideoCard } from "components/Card/ViedoCard";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { createPortal } from "react-dom";
 import { CloseModalBtn, ModalContainer, ModalContent, ModalCloseIcon } from "./styled";
 import { Overlay } from "components/styled";

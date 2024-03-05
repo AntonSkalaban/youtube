@@ -1,4 +1,3 @@
-import React from "react";
 import { VideoCardSkeleton } from "components/Card/VideoCardSkeleton";
 
 export const SkeletonList: React.FC = () => {

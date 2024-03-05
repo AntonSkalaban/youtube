@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useActions, useClickOutside, useElasticSearch } from "utils/hooks";
 import { SearchSuggestionsContainer, SearchSuggestionsLi, SearchSuggestionsText } from "./styled";
 import { SkeletonBlock } from "components/styled";

@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { getThemeType } from "store/slice";
 import { ThemeEnum, darkTheme, lightTheme } from "components/styled/Theme";

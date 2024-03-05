@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { getSearchParams } from "store/slice";
 import { useActions } from "utils/hooks";

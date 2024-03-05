@@ -1,4 +1,3 @@
-import React from "react";
 import { videoAPI } from "store/api/videoApi";
 import { useSelector } from "react-redux";
 import { getSearchParams } from "store/slice";

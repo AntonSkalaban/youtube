@@ -1,4 +1,3 @@
-import React from "react";
 import { Title1 } from "components/styled/StyledComponents";
 import { LogoIcon, LogoContainer } from "./styled";
 

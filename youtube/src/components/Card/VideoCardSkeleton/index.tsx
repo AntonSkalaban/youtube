@@ -1,4 +1,3 @@
-import React from "react";
 import { TextSkeletonContainer } from "./styled";
 import { Skeleton, Title2, Text, SkeletonBlock } from "components/styled/StyledComponents";
 import {

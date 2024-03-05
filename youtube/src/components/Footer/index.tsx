@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { titles, icons } from "constants/index";
 import { Wrapper } from "components/Wrapper";
 import {
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             })}
           </FooterNav>
         </FooterContainer>
-        <BottomText>2023 Modsen company</BottomText>
+        <BottomText>{new Date().getFullYear()} Modsen company</BottomText>
       </Wrapper>
     </FooterWrapper>
   );

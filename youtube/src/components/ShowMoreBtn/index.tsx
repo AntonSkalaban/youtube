@@ -1,4 +1,3 @@
-import React from "react";
 import { useActions } from "utils/hooks";
 import { StyledButton } from "./styled";
 interface ShowMoreBtnProps {

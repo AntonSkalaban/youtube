@@ -1,4 +1,3 @@
-import React from "react";
 import { SearchBar } from "components/Searchbar";
 import { Logo } from "components/Logo";
 import { ThemeToggle } from "components/ThemeToggle";
