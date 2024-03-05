@@ -22,7 +22,7 @@ export const SearchBar: React.FC = () => {
 
   const handleClick = () => changeTitle(value);
 
-  const hanldeKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const hanldeKeyDown = (e: React.KeyboardEvent<HTMLInputElement | HTMLButtonElement>) => {
     if (e.key === "Enter") changeTitle(value);
   };
 
@@ -34,9 +34,15 @@ export const SearchBar: React.FC = () => {
         onKeyDown={hanldeKeyDown}
         value={value}
         placeholder="Search..."
+        aria-label="Field for entering a search query"
       />
       <SearchSuggestions value={value} hanldeSelect={setValue} />
-      <SearchButton onClick={handleClick} data-testid="search-btn">
+      <SearchButton
+        onClick={handleClick}
+        data-testid="search-btn"
+        tabIndex={0}
+        onKeyDown={hanldeKeyDown}
+      >
         <SearchIcon />
       </SearchButton>
     </SearchBarContainer>

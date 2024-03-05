@@ -46,7 +46,9 @@ export const SearchButton = styled.button`
   border: ${({ theme }) => theme.borders.thin};
   border-color: ${({ theme }) => theme.colors.border};
 
-  ${flex({ jc: "center" })}/* display: flex;
-  align-items: center;
-  justify-content: center; */
+  ${flex({ jc: "center" })}
+
+  &:focus {
+    outline-color: ${({ theme }) => theme.colors.orange};
+  }
 `;
