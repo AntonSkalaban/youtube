@@ -8,7 +8,7 @@ export enum ThemeEnum {
 
 export const baseTheme: Theme = {
   colors: {
-    grey: "#c4c4c4",
+    grey: "rgba(196, 196, 196, 1)",
     lightGrey: "rgba(0, 0, 0, 0.1)",
     orange: "rgba(255, 138, 0, 1)",
     black: "rgb(0, 0, 0)",
@@ -36,19 +36,19 @@ export const lightTheme: DefaultTheme = {
 
   colors: {
     ...baseTheme.colors,
-    bg: "rgb(255, 255, 255)",
-    font: "rgb(0, 0, 0)",
-    border: "#c4c4c4",
+    bg: "rgba(255, 255, 255, 1)",
+    font: "rgba(0, 0, 0, 1)",
+    border: "rgba(196, 196, 196, 1)",
 
     tab: {
       default: {
         bg: "rgba(0, 0, 0, 0.1)",
-        font: "rgb(0, 0, 0)",
+        font: "rgba(0, 0, 0, 1)",
       },
 
       active: {
-        bg: "rgb(0, 0, 0)",
-        font: "rgb(255, 255, 255)",
+        bg: "rgba(0, 0, 0)",
+        font: "rgba(255, 255, 255, 1)",
       },
     },
   },
@@ -60,18 +60,18 @@ export const darkTheme: DefaultTheme = {
 
   colors: {
     ...baseTheme.colors,
-    bg: "#1b1b1d",
-    font: "rgb(255, 255, 255)",
-    border: "#35363a",
+    bg: "rgba(27, 27, 29, 1)",
+    font: "rgba(255, 255, 255, 1)",
+    border: "rgba(53, 54, 58, 1)",
     tab: {
       default: {
-        bg: "#272729",
-        font: "rgb(255, 255, 255)",
+        bg: "rgba(39, 39, 41, 1)",
+        font: "rgba(255, 255, 255, 1)",
       },
 
       active: {
-        bg: "rgb(0, 0, 0)",
-        font: "rgb(255, 255, 255)",
+        bg: "rgba(0, 0, 0, 1)",
+        font: "rgba(255, 255, 255, 1)",
       },
     },
   },

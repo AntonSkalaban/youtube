@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { flex } from "components/styled";
 
 export const SwitchInput = styled.input`
   height: 0;
@@ -8,9 +9,8 @@ export const SwitchInput = styled.input`
 `;
 
 export const SwitchLabel = styled.label`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  ${flex({ jc: "space-between" })}
+
   cursor: pointer;
   width: 50px;
   height: 25px;
@@ -34,6 +34,7 @@ export const SwitchButton = styled.span`
   transition: 0.2s;
   background: ${({ theme }) => theme.colors.white};
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+
   ${SwitchInput}:checked + ${SwitchLabel} & {
     left: 100%;
     transform: translateX(-100%);
@@ -42,6 +43,7 @@ export const SwitchButton = styled.span`
   ${SwitchLabel}:active & {
     width: 45px;
   }
+
   &:hover {
     background: ${({ theme }) => theme.colors.orange};
   }

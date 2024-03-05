@@ -1,10 +1,8 @@
-import { Skeleton } from "components/styled/StyledComponents";
+import { Skeleton, flex } from "components/styled";
 import { styled } from "styled-components";
 
 export const TextSkeletonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  ${flex({ fd: "column", ai: "flex-start", jc: "start", g: "2px" })}
 `;
 
 export const CardAvatarSkeleton = styled(Skeleton)`

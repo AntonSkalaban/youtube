@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Button } from "components/styled/StyledComponents";
 import CloseIcon from "assets/svg/close.svg";
+import { flex } from "components/styled";
 
 export const ModalOverlay = styled.section`
   position: fixed;
@@ -26,9 +27,11 @@ export const ModalContainer = styled.section`
   transform: translate(-50%, -50%);
   background-color: ${({ theme }) => theme.colors.bg};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
   @media ${({ theme }) => theme.media.small} {
     width: 100%;
   }
+
   @media ${({ theme }) => theme.media.extasmall} {
     height: 230px;
   }
@@ -40,11 +43,12 @@ export const CloseModalBtn = styled(Button)`
   position: absolute;
   top: 0;
   right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  ${flex({ jc: "center" })}
+
   background-color: red;
   border-radius: 50%;
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.lightGrey};
   }

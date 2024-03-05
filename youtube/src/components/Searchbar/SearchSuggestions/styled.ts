@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
-import { Text } from "components/styled/index";
-export const SearchTipsContainer = styled.div`
+import { Text, flex, textOverflow } from "components/styled";
+
+export const SearchSuggestionsContainer = styled.div`
   width: 100%;
   height: fit-content;
   background-color: ${({ theme }) => theme.colors.bg};
@@ -10,11 +11,10 @@ export const SearchTipsContainer = styled.div`
   z-index: 2;
 `;
 
-export const SearchTipsLi = styled.li`
+export const SearchSuggestionsLi = styled.li`
   height: 28px;
 
-  display: flex;
-  align-items: center;
+  ${flex({})}
 
   cursor: pointer;
   padding: 0 15px 0 15px;
@@ -24,12 +24,10 @@ export const SearchTipsLi = styled.li`
   }
 `;
 
-export const SearchTipsText = styled(Text)`
+export const SearchSuggestionsText = styled(Text)`
   width: 100%;
   font-size: 16px;
   line-height: 28px;
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  ${textOverflow}
 `;

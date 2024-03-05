@@ -12,6 +12,7 @@ export const StyledButton = styled(Button)`
   font-weight: 700;
   color: white;
   line-height: 25.78px;
+
   @media ${({ theme }) => theme.media.extasmall} {
     width: 100%;
     height: 33px;

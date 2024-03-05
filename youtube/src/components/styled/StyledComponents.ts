@@ -11,6 +11,7 @@ export const Title2 = styled.h2`
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
+
   @media ${({ theme }) => theme.media.small} {
     font-size: 14px;
     line-height: 16px;
@@ -21,6 +22,7 @@ export const Title3 = styled.h3`
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+
   @media ${({ theme }) => theme.media.small} {
     font-size: 14px;
   }
@@ -30,6 +32,7 @@ export const Text = styled.p<{ size?: number }>`
   font-size: ${({ size = 400 }) => size};
   font-weight: 400;
   line-height: 18px;
+
   @media ${({ theme }) => theme.media.small} {
     font-size: 14px;
   }
@@ -38,6 +41,7 @@ export const Text = styled.p<{ size?: number }>`
 export const Button = styled.button`
   cursor: pointer;
   border: none;
+
   &:hover {
     opacity: 0.8;
     transition: opacity 0.5s;

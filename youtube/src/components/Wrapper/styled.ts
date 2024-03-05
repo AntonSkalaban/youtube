@@ -10,6 +10,7 @@ export const StyledWrapper = styled.div`
   @media ${({ theme }) => theme.media.large} {
     max-width: 1020px;
   }
+
   @media ${({ theme }) => theme.media.extasmall} {
     max-width: 480px;
   }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useActions, useClickOutside, useElasticSearch } from "utils/hooks";
-import { SearchTipsContainer, SearchTipsLi, SearchTipsText } from "./styled";
+import { SearchSuggestionsContainer, SearchSuggestionsLi, SearchSuggestionsText } from "./styled";
 import { SkeletonBlock } from "components/styled";
 
 interface SearchSuggestionsProps {
@@ -26,21 +26,23 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ value, han
   return (
     <>
       {isOpen && (
-        <SearchTipsContainer ref={ref} data-testid="search-tips">
+        <SearchSuggestionsContainer ref={ref} data-testid="search-Suggestions">
           <ul>
             {possibleNames.map((name) => {
               return (
-                <SearchTipsLi key={name}>
+                <SearchSuggestionsLi key={name}>
                   {isFetching ? (
                     <SkeletonBlock height="16px" />
                   ) : (
-                    <SearchTipsText onClick={hanldeClick(name)}>{name}</SearchTipsText>
+                    <SearchSuggestionsText onClick={hanldeClick(name)}>
+                      {name}
+                    </SearchSuggestionsText>
                   )}
-                </SearchTipsLi>
+                </SearchSuggestionsLi>
               );
             })}
           </ul>
-        </SearchTipsContainer>
+        </SearchSuggestionsContainer>
       )}
     </>
   );

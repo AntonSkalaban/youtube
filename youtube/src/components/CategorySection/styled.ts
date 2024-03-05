@@ -6,14 +6,17 @@ export const CategoryContainer = styled.section`
   border-top: ${({ theme }) => theme.borders.thin};
   border-bottom: ${({ theme }) => theme.borders.thin};
   border-color: ${({ theme }) => theme.colors.border};
+
   @media ${({ theme }) => theme.media.medium} {
     border: none;
   }
+
   @media ${({ theme }) => theme.media.small} {
     height: 68px;
     border: none;
     margin-top: 20px;
   }
+
   @media ${({ theme }) => theme.media.extasmall} {
     margin-top: 14px;
   }
@@ -30,9 +33,9 @@ export const CategoryButtonsContainer = styled.div`
 
   align-items: center;
   justify-content: center;
-  gap: 1rem;
 
   gap: 8px;
+
   @media ${({ theme }) => theme.media.small} {
     grid-template-rows: repeat(2, 30px);
     grid-auto-flow: column dense;
@@ -59,6 +62,7 @@ export const CategoryButton = styled(Button)<{ $isActive: boolean }>`
   padding: 0 20px 0 20px;
 
   color: ${({ theme, $isActive }) => theme.colors.tab[$isActive ? "active" : "default"].font};
+
   &:hover {
     color: ${({ theme }) => theme.colors.tab.active.font};
     background-color: ${({ theme }) => theme.colors.tab.active.bg};
