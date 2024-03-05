@@ -3,7 +3,7 @@ export const categoryes = [
   { name: "action", value: "action" },
   { name: "drama", value: "drama" },
   { name: "crime", value: "crime" },
-  { name: "romantict", value: "romantict" },
+  { name: "romantic", value: "romantic" },
   { name: "horror", value: "horror" },
   { name: "documentary", value: "documentary" },
 ];

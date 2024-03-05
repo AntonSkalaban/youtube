@@ -1,5 +1,5 @@
 import React from "react";
-import { icons } from "const/footerData";
+import { icons } from "constants/footerData";
 import { Wrapper } from "components/Wrapper";
 import {
   BottomText,
