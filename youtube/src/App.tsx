@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Main } from "pages/Main";
+import { Main, NotFound } from "pages";
 import { FontStyles, GlobalStyle, NormalStyle } from "components/styled";
 import { getTheme } from "store/slice";
 
@@ -13,7 +14,10 @@ export const App: React.FC = () => {
       <GlobalStyle />
       <FontStyles />
 
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />} />:
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </ThemeProvider>
   );
 };

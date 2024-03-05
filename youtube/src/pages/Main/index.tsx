@@ -1,4 +1,3 @@
-import React from "react";
 import { CategorySection } from "components/CategorySection";
 import { Content } from "components/Content";
 import { ErrorBoundary } from "components/ErrorBoundary";

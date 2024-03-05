@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = (env) => {
@@ -56,12 +57,23 @@ module.exports = (env) => {
       ],
     },
     devtool: isDev ? "inline-source-map" : false,
-    devServer: isDev ? { port: 3000, open: true, hot: true } : undefined,
+    devServer: isDev ? { port: 3000, open: true, hot: true, historyApiFallback: true } : undefined,
     plugins: [
-      new HtmlWebpackPlugin({ template: path.resolve(__dirname, "public", "index.html") }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "public", "index.html"),
+        favicon: path.resolve(__dirname, "public", "youtube.svg"),
+      }),
       new MiniCssExtractPlugin({
         filename: isDev ? "[name].css" : "[name].[contenthash].css",
         chunkFilename: isDev ? "[id].css" : "[id].[contenthash].css",
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, "public", "_redirects"),
+            to: path.resolve(__dirname, "build"),
+          },
+        ],
       }),
       new Dotenv(),
     ],
