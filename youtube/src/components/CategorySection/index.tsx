@@ -24,6 +24,9 @@ export const CategorySection: React.FC = () => {
                 $isActive={category === value}
                 onClick={hanldeClick(value)}
                 key={value}
+                role="button"
+                tabIndex={0}
+                aria-pressed={category === value}
               >
                 {name}
               </CategoryButton>

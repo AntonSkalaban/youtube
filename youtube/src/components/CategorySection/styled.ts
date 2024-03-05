@@ -68,4 +68,8 @@ export const CategoryButton = styled(Button)<{ $isActive: boolean }>`
     background-color: ${({ theme }) => theme.colors.tab.active.bg};
     transition: all 0.5s;
   }
+
+  &:focus {
+    outline-color: ${({ theme }) => theme.colors.orange};
+  }
 `;
