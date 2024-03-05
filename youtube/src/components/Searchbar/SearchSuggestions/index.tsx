@@ -3,11 +3,11 @@ import { useActions, useClickOutside, useElasticSearch } from "utils/hooks";
 import { SearchTipsContainer, SearchTipsLi, SearchTipsText } from "./styled";
 import { SkeletonBlock } from "components/styled";
 
-interface SearchTips {
+interface SearchSuggestionsProps {
   value: string;
   hanldeSelect: (value: string) => void;
 }
-export const SearchTips: React.FC<SearchTips> = ({ value, hanldeSelect }) => {
+export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ value, hanldeSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { possibleNames, isFetching } = useElasticSearch(value);
   const { changeTitle } = useActions();
@@ -26,7 +26,7 @@ export const SearchTips: React.FC<SearchTips> = ({ value, hanldeSelect }) => {
   return (
     <>
       {isOpen && (
-        <SearchTipsContainer ref={ref}>
+        <SearchTipsContainer ref={ref} data-testid="search-tips">
           <ul>
             {possibleNames.map((name) => {
               return (

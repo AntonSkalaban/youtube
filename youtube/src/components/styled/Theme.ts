@@ -11,8 +11,8 @@ export const baseTheme: Theme = {
     grey: "#c4c4c4",
     lightGrey: "rgba(0, 0, 0, 0.1)",
     orange: "rgba(255, 138, 0, 1)",
-    black: "#000",
-    white: "#fff",
+    black: "rgb(0, 0, 0)",
+    white: "rgb(255, 255, 255)",
   },
 
   borders: {
@@ -36,19 +36,19 @@ export const lightTheme: DefaultTheme = {
 
   colors: {
     ...baseTheme.colors,
-    bg: "#fff",
-    font: "#000",
+    bg: "rgb(255, 255, 255)",
+    font: "rgb(0, 0, 0)",
     border: "#c4c4c4",
 
     tab: {
       default: {
         bg: "rgba(0, 0, 0, 0.1)",
-        font: "#000",
+        font: "rgb(0, 0, 0)",
       },
 
       active: {
-        bg: "#000",
-        font: "#fff",
+        bg: "rgb(0, 0, 0)",
+        font: "rgb(255, 255, 255)",
       },
     },
   },
@@ -61,17 +61,17 @@ export const darkTheme: DefaultTheme = {
   colors: {
     ...baseTheme.colors,
     bg: "#1b1b1d",
-    font: "#fff",
+    font: "rgb(255, 255, 255)",
     border: "#35363a",
     tab: {
       default: {
         bg: "#272729",
-        font: "#fff",
+        font: "rgb(255, 255, 255)",
       },
 
       active: {
-        bg: "#000",
-        font: "#fff",
+        bg: "rgb(0, 0, 0)",
+        font: "rgb(255, 255, 255)",
       },
     },
   },
