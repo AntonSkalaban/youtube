@@ -20,7 +20,7 @@ module.exports = (env) => {
         components: path.resolve(__dirname, "src/components"),
         pages: path.resolve(__dirname, "src/pages"),
         store: path.resolve(__dirname, "src/store"),
-        const: path.resolve(__dirname, "src/const"),
+        constants: path.resolve(__dirname, "src/constants"),
         types: path.resolve(__dirname, "src/types"),
         tests: path.resolve(__dirname, "src/tests"),
         utils: path.resolve(__dirname, "src/utils"),

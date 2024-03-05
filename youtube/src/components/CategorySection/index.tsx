@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { getSearchParams } from "store/slice";
 import { useActions } from "utils/hooks";
-import { categoryes } from "constants";
 import { Wrapper } from "components/Wrapper";
 import { CategoryContainer, CategoryButtonsContainer, CategoryButton } from "./styled";
+import { categoryes } from "constants/index";
 
 export const CategorySection: React.FC = () => {
   const category = useSelector(getSearchParams).category;

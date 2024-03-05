@@ -1,5 +1,5 @@
-import React from "react";
-import { icons } from "constants/footerData";
+import React, { Fragment } from "react";
+import { titles, icons } from "constants/index";
 import { Wrapper } from "components/Wrapper";
 import {
   BottomText,
@@ -17,17 +17,20 @@ export const Footer: React.FC = () => {
       <Wrapper>
         <FooterContainer>
           <FooterTextContainer>
-            <FooterText>
-              TermsPrivacyPolicy & Safety <br />
-              How YouTube works <br />
-              Test new features
-            </FooterText>
-
-            <FooterText>
-              About Press Copyright <br />
-              Contact us Creators <br />
-              Advertise Developers
-            </FooterText>
+            {Object.keys(titles).map((key) => {
+              return (
+                <FooterText key={key}>
+                  {titles[key].map((text) => {
+                    return (
+                      <Fragment key={text}>
+                        {text}
+                        <br />
+                      </Fragment>
+                    );
+                  })}
+                </FooterText>
+              );
+            })}
           </FooterTextContainer>
 
           <FooterNav>
