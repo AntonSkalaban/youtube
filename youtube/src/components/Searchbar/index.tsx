@@ -2,9 +2,9 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getSearchParams } from "store/slice";
 import { useActions } from "utils/hooks";
-import { SearchButton, SearchInput, SearchBarContainer } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
 import { SearchSuggestions } from "./SearchSuggestions";
+import { SearchBarContainer, SearchButton, SearchInput } from "./styled";
 
 export const SearchBar: React.FC = () => {
   const category = useSelector(getSearchParams).category;

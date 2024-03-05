@@ -1,11 +1,12 @@
 import React from "react";
-import "@testing-library/jest-dom";
 import { fireEvent } from "@testing-library/react";
-import { renderWithProviders, setupStore } from "./util/test-util";
-import "jest-styled-components";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "components/styled/Theme";
 import { CategorySection } from "components/CategorySection";
+import { lightTheme } from "components/styled/Theme";
+import { renderWithProviders, setupStore } from "./util/test-util";
+
+import "@testing-library/jest-dom";
+import "jest-styled-components";
 
 const theme = lightTheme;
 

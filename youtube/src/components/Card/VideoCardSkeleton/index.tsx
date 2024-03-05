@@ -1,11 +1,11 @@
-import { TextSkeletonContainer } from "./styled";
-import { Skeleton, Title2, Text, SkeletonBlock } from "components/styled/StyledComponents";
 import {
   CardAvatarContainer,
   CardContainer,
   CardDescription,
   CardImgContainer,
 } from "components/Card/ViedoCard/styled";
+import { Skeleton, SkeletonBlock, Text, Title2 } from "components/styled/StyledComponents";
+import { TextSkeletonContainer } from "./styled";
 
 export const VideoCardSkeleton: React.FC = () => {
   return (

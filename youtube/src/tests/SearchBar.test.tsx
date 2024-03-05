@@ -1,11 +1,12 @@
 import React from "react";
-import "@testing-library/jest-dom";
 import { act, fireEvent } from "@testing-library/react";
-import { changeCategory } from "store/slice/ParamsSlice";
-import { renderWithProviders, setupStore } from "./util/test-util";
 import { ThemeProvider } from "styled-components";
 import { SearchBar } from "components/Searchbar";
 import { darkTheme } from "components/styled/Theme";
+import { changeCategory } from "store/slice/ParamsSlice";
+import { renderWithProviders, setupStore } from "./util/test-util";
+
+import "@testing-library/jest-dom";
 
 const theme = darkTheme;
 

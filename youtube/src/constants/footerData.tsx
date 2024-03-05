@@ -1,8 +1,8 @@
 import React from "react";
 import Facebook from "assets/svg/facebook.svg";
-import Twitter from "assets/svg/twitter.svg";
 import Instagram from "assets/svg/inst.svg";
 import LinkedId from "assets/svg/linkedIn.svg";
+import Twitter from "assets/svg/twitter.svg";
 
 export const titles: { [key: string]: string[] } = {
   first: ["TermsPrivacyPolicy & Safety", "How YouTube works", "Test new features"],

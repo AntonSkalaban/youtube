@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ThemeEnum, darkTheme, lightTheme } from "components/styled/Theme";
 import { DefaultTheme } from "styled-components";
+import { darkTheme, lightTheme, ThemeEnum } from "components/styled/Theme";
 
 const initialState: { theme: DefaultTheme } = {
   theme: localStorage.getItem("themeType") === ThemeEnum.dark ? darkTheme : lightTheme,

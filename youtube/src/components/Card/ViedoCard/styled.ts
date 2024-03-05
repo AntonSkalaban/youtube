@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Title3, Text } from "components/styled/StyledComponents";
 import { textOverflow } from "components/styled";
+import { Text, Title3 } from "components/styled/StyledComponents";
 
 export const CardContainer = styled.div`
   height: 283px;

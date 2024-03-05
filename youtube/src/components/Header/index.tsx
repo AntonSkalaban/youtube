@@ -1,8 +1,8 @@
-import { SearchBar } from "components/Searchbar";
+import { BurgerMenu } from "components/BurgerMenu";
 import { Logo } from "components/Logo";
+import { SearchBar } from "components/Searchbar";
 import { ThemeToggle } from "components/ThemeToggle";
 import { Wrapper } from "components/Wrapper";
-import { BurgerMenu } from "components/BurgerMenu";
 import { HeaderContainer, HeaderToggleContainer } from "./styled";
 
 export const Header: React.FC = () => {

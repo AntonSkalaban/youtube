@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { VideoSnippet } from "types/api";
-import { Player } from "components/Player";
 import { Modal } from "components/Modal";
+import { Player } from "components/Player";
+import { VideoSnippet } from "types/api";
+import AvatarImg from "assets/png/avatar.png";
 import {
+  CardAvatarContainer,
+  CardContainer,
+  CardDescription,
+  CardImg,
+  CardImgContainer,
   CardText,
   CardTitle,
-  CardDescription,
-  CardImgContainer,
-  CardContainer,
-  CardImg,
-  CardAvatarContainer,
 } from "./styled";
-import AvatarImg from "assets/png/avatar.png";
 
 interface VideoCardProps {
   snippet: VideoSnippet;

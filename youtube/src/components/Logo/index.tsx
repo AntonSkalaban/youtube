@@ -1,5 +1,5 @@
 import { Title1 } from "components/styled/StyledComponents";
-import { LogoIcon, LogoContainer } from "./styled";
+import { LogoContainer, LogoIcon } from "./styled";
 
 export const Logo: React.FC = () => {
   return (

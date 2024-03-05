@@ -1,5 +1,5 @@
-import { Theme } from "types/themeType";
 import { DefaultTheme } from "styled-components";
+import { Theme } from "types/themeType";
 
 export enum ThemeEnum {
   light = "light",

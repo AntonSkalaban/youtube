@@ -1,12 +1,13 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import { http, HttpResponse, delay } from "msw";
+import { delay, http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
-import { renderWithProviders } from "./util/test-util";
+import { ThemeProvider } from "styled-components";
 import { Content } from "components/Content";
 import { lightTheme } from "components/styled/Theme";
-import { ThemeProvider } from "styled-components";
+import { renderWithProviders } from "./util/test-util";
+
+import "@testing-library/jest-dom";
 
 export const handlers = [
   http.get("https://youtube-v31.p.rapidapi.com/search", async () => {

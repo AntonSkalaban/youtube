@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Text, flex, textOverflow } from "components/styled";
+import { flex, Text, textOverflow } from "components/styled";
 
 export const SearchSuggestionsContainer = styled.div`
   width: 100%;

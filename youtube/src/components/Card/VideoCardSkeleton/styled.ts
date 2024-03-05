@@ -1,5 +1,5 @@
-import { Skeleton, flex } from "components/styled";
 import { styled } from "styled-components";
+import { flex, Skeleton } from "components/styled";
 
 export const TextSkeletonContainer = styled.div`
   ${flex({ fd: "column", ai: "flex-start", jc: "start", g: "2px" })}

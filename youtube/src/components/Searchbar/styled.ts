@@ -1,5 +1,5 @@
-import { flex } from "components/styled";
 import styled from "styled-components";
+import { flex } from "components/styled";
 
 export const SearchBarContainer = styled.div`
   width: 627px;

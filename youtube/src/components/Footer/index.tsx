@@ -1,14 +1,14 @@
 import { Fragment } from "react";
-import { titles, icons } from "constants/index";
 import { Wrapper } from "components/Wrapper";
+import { icons, titles } from "constants/index";
 import {
   BottomText,
   FooterContainer,
+  FooterLink,
   FooterNav,
   FooterText,
   FooterTextContainer,
   FooterWrapper,
-  FooterLink,
 } from "./styled";
 
 export const Footer: React.FC = () => {

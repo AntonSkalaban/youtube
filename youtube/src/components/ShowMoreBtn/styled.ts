@@ -1,5 +1,5 @@
-import { Button } from "components/styled/StyledComponents";
 import { styled } from "styled-components";
+import { Button } from "components/styled/StyledComponents";
 
 export const StyledButton = styled(Button)`
   width: 193px;

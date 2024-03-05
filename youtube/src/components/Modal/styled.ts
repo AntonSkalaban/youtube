@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
+import { flex } from "components/styled";
 import { Button } from "components/styled/StyledComponents";
 import CloseIcon from "assets/svg/close.svg";
-import { flex } from "components/styled";
 
 export const ModalOverlay = styled.section`
   position: fixed;

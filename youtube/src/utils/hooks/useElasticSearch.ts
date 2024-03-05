@@ -1,7 +1,7 @@
-import { useDebounce } from "./index";
-import { videoAPI } from "store/api";
 import { useMemo } from "react";
+import { videoAPI } from "store/api";
 import { getPossibleNames } from "utils/helpers/";
+import { useDebounce } from "./index";
 
 export const useElasticSearch = (value: string) => {
   const debouncedValue = useDebounce(value, 500);

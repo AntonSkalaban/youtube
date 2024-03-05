@@ -1,6 +1,6 @@
+import { styled } from "styled-components";
 import { flex } from "components/styled";
 import { Title2 } from "components/styled/StyledComponents";
-import { styled } from "styled-components";
 
 export const FooterWrapper = styled.footer`
   border-top: ${({ theme }) => theme.borders.thin};

@@ -1,9 +1,9 @@
-import { videoAPI } from "store/api/videoApi";
 import { useSelector } from "react-redux";
-import { getSearchParams } from "store/slice";
-import { ShowMoreBtn } from "components/ShowMoreBtn";
 import { CardsContainer } from "components/CardsContainer";
+import { ShowMoreBtn } from "components/ShowMoreBtn";
 import { Title2 } from "components/styled/StyledComponents";
+import { videoAPI } from "store/api/videoApi";
+import { getSearchParams } from "store/slice";
 import { ContentContainer } from "./styled";
 
 export const Content: React.FC = () => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Overlay } from "components/styled";
-import { BurgerIconContainer, BurgerIcon, BurgerMenuContent } from "./styled";
+import { BurgerIcon, BurgerIconContainer, BurgerMenuContent } from "./styled";
 
 interface BurgerMenuProsp {
   children: React.ReactNode;

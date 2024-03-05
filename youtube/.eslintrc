@@ -23,7 +23,7 @@
     }
     },
     "plugins": [
-      "@babel", "react", "prettier", "react-hooks", "cypress"
+      "@babel", "react", "prettier", "react-hooks", "cypress", "simple-import-sort"
     ],
     "rules": {
       "comma-dangle": "off",
@@ -43,7 +43,23 @@
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/no-var-reqiures": "off",
       "no-console": "error",
-      "no-inline-comments": "error"
+      "no-inline-comments": "error",
+      "simple-import-sort/imports": [
+        "error",
+        {
+          "groups": [
+            ["^react", "^@?\\w",
+            "^(pages)(/.*|$)",
+            "^(components)(/.*|$)", 
+            "^(store)(/.*|$)",
+            "^(constants)(/.*|$)",
+            "^(utils)(/.*|$)",
+            "^(types)(/.*|$)",
+            "^(assets)(/.*|$)",
+            "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
+          ]
+        }
+      ]
     },
     "settings": {
       "react": {

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
+import { darkTheme, lightTheme, ThemeEnum } from "components/styled/Theme";
 import { getThemeType } from "store/slice";
-import { ThemeEnum, darkTheme, lightTheme } from "components/styled/Theme";
-import { SwitchInput, SwitchLabel, SwitchButton } from "./styled";
 import { useActions } from "utils/hooks";
+import { SwitchButton, SwitchInput, SwitchLabel } from "./styled";
 
 export const ThemeToggle: React.FC = () => {
   const themeType = useSelector(getThemeType);

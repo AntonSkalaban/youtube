@@ -1,6 +1,6 @@
+import { styled } from "styled-components";
 import { flex } from "components/styled/Mixin";
 import { ThemeEnum } from "components/styled/Theme";
-import { styled } from "styled-components";
 
 export const BurgerIconContainer = styled.div`
   width: 100%;

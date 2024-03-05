@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
-import { getTheme } from "store/slice";
-import { FontStyles, GlobalStyle, NormalStyle } from "components/styled";
 import { Main } from "pages/Main";
+import { FontStyles, GlobalStyle, NormalStyle } from "components/styled";
+import { getTheme } from "store/slice";
 
 export const App: React.FC = () => {
   const theme = useSelector(getTheme);

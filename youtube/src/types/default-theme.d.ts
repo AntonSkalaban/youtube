@@ -1,7 +1,7 @@
-import "styled-components";
-
 import { Theme } from "./themeType";
 import { Colors } from "./themeType";
+
+import "styled-components";
 
 export interface DefaultColors extends Colors {
   bg: string;

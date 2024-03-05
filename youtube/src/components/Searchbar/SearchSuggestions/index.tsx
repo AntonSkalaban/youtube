@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { SkeletonBlock } from "components/styled";
 import { useActions, useClickOutside, useElasticSearch } from "utils/hooks";
 import { SearchSuggestionsContainer, SearchSuggestionsLi, SearchSuggestionsText } from "./styled";
-import { SkeletonBlock } from "components/styled";
 
 interface SearchSuggestionsProps {
   value: string;
