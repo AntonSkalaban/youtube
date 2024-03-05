@@ -1,12 +1,11 @@
-import React from "react";
 import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { getTheme } from "store/slice";
+import { Main, NotFound } from "pages";
 import { FontStyles, GlobalStyle, NormalStyle } from "components/styled";
-import { Main } from "pages/Main";
+import { getTheme } from "store/slice";
 
 export const App: React.FC = () => {
-  console.log(getTheme);
   const theme = useSelector(getTheme);
 
   return (
@@ -15,7 +14,10 @@ export const App: React.FC = () => {
       <GlobalStyle />
       <FontStyles />
 
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />} />:
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </ThemeProvider>
   );
 };

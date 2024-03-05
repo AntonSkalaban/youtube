@@ -1,10 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = (env) => {
   const isDev = env.mode === "development";
-
   return {
     mode: env.mode ?? "development",
     entry: path.resolve(__dirname, "src", "index.tsx"),
@@ -20,7 +21,7 @@ module.exports = (env) => {
         components: path.resolve(__dirname, "src/components"),
         pages: path.resolve(__dirname, "src/pages"),
         store: path.resolve(__dirname, "src/store"),
-        const: path.resolve(__dirname, "src/const"),
+        constants: path.resolve(__dirname, "src/constants"),
         types: path.resolve(__dirname, "src/types"),
         tests: path.resolve(__dirname, "src/tests"),
         utils: path.resolve(__dirname, "src/utils"),
@@ -56,13 +57,25 @@ module.exports = (env) => {
       ],
     },
     devtool: isDev ? "inline-source-map" : false,
-    devServer: isDev ? { port: 3000, open: true, hot: true } : undefined,
+    devServer: isDev ? { port: 3000, open: true, hot: true, historyApiFallback: true } : undefined,
     plugins: [
-      new HtmlWebpackPlugin({ template: path.resolve(__dirname, "public", "index.html") }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "public", "index.html"),
+        favicon: path.resolve(__dirname, "public", "youtube.svg"),
+      }),
       new MiniCssExtractPlugin({
         filename: isDev ? "[name].css" : "[name].[contenthash].css",
         chunkFilename: isDev ? "[id].css" : "[id].[contenthash].css",
       }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, "public", "_redirects"),
+            to: path.resolve(__dirname, "build"),
+          },
+        ],
+      }),
+      new Dotenv(),
     ],
   };
 };

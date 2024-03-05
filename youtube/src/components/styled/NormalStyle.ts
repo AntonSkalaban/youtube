@@ -33,10 +33,12 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
+  padding: 0;
 }
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }

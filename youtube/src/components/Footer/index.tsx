@@ -1,14 +1,14 @@
-import React from "react";
-import { icons } from "const/footerData";
+import { Fragment } from "react";
 import { Wrapper } from "components/Wrapper";
+import { icons, titles } from "constants/index";
 import {
   BottomText,
   FooterContainer,
+  FooterLink,
   FooterNav,
   FooterText,
   FooterTextContainer,
   FooterWrapper,
-  FooterLink,
 } from "./styled";
 
 export const Footer: React.FC = () => {
@@ -17,17 +17,20 @@ export const Footer: React.FC = () => {
       <Wrapper>
         <FooterContainer>
           <FooterTextContainer>
-            <FooterText>
-              TermsPrivacyPolicy & Safety <br />
-              How YouTube works <br />
-              Test new features
-            </FooterText>
-
-            <FooterText>
-              About Press Copyright <br />
-              Contact us Creators <br />
-              Advertise Developers
-            </FooterText>
+            {Object.keys(titles).map((key) => {
+              return (
+                <FooterText key={key}>
+                  {titles[key].map((text) => {
+                    return (
+                      <Fragment key={text}>
+                        {text}
+                        <br />
+                      </Fragment>
+                    );
+                  })}
+                </FooterText>
+              );
+            })}
           </FooterTextContainer>
 
           <FooterNav>
@@ -40,7 +43,7 @@ export const Footer: React.FC = () => {
             })}
           </FooterNav>
         </FooterContainer>
-        <BottomText>2023 Modsen company</BottomText>
+        <BottomText>{new Date().getFullYear()} Modsen company</BottomText>
       </Wrapper>
     </FooterWrapper>
   );

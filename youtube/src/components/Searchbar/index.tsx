@@ -1,9 +1,10 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getSearchParams } from "store/slice";
 import { useActions } from "utils/hooks";
-import { SearchButton, SearchInput, SearchBarContainer } from "./styled";
 import SearchIcon from "assets/svg/search.svg";
+import { SearchSuggestions } from "./SearchSuggestions";
+import { SearchBarContainer, SearchButton, SearchInput } from "./styled";
 
 export const SearchBar: React.FC = () => {
   const category = useSelector(getSearchParams).category;
@@ -21,19 +22,27 @@ export const SearchBar: React.FC = () => {
 
   const handleClick = () => changeTitle(value);
 
-  const hanldeKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const hanldeKeyDown = (e: React.KeyboardEvent<HTMLInputElement | HTMLButtonElement>) => {
     if (e.key === "Enter") changeTitle(value);
   };
 
   return (
     <SearchBarContainer>
       <SearchInput
+        type="text"
         onChange={hanldeChange}
         onKeyDown={hanldeKeyDown}
         value={value}
         placeholder="Search..."
+        aria-label="Field for entering a search query"
       />
-      <SearchButton onClick={handleClick}>
+      <SearchSuggestions value={value} hanldeSelect={setValue} />
+      <SearchButton
+        onClick={handleClick}
+        data-testid="search-btn"
+        tabIndex={0}
+        onKeyDown={hanldeKeyDown}
+      >
         <SearchIcon />
       </SearchButton>
     </SearchBarContainer>

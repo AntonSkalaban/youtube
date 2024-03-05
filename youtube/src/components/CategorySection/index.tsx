@@ -1,10 +1,9 @@
-import React from "react";
 import { useSelector } from "react-redux";
-import { getSearchParams } from "store/slice";
-import { useActions } from "utils/hooks";
-import { categoryes } from "const";
 import { Wrapper } from "components/Wrapper";
-import { CategoryContainer, CategoryButtonsContainer, CategoryButton } from "./styled";
+import { getSearchParams } from "store/slice";
+import { categoryes } from "constants/index";
+import { useActions } from "utils/hooks";
+import { CategoryButton, CategoryButtonsContainer, CategoryContainer } from "./styled";
 
 export const CategorySection: React.FC = () => {
   const category = useSelector(getSearchParams).category;
@@ -25,6 +24,9 @@ export const CategorySection: React.FC = () => {
                 $isActive={category === value}
                 onClick={hanldeClick(value)}
                 key={value}
+                role="button"
+                tabIndex={0}
+                aria-pressed={category === value}
               >
                 {name}
               </CategoryButton>

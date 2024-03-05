@@ -1,12 +1,19 @@
-import React from "react";
 import { useSelector } from "react-redux";
+import { darkTheme, lightTheme, ThemeEnum } from "components/styled/Theme";
 import { getThemeType } from "store/slice";
 import { useActions } from "utils/hooks";
-import { ThemeEnum } from "components/styled/Theme";
-import { SwitchInput, SwitchLabel, SwitchButton } from "./styled";
+import { SwitchButton, SwitchInput, SwitchLabel } from "./styled";
+
 export const ThemeToggle: React.FC = () => {
   const themeType = useSelector(getThemeType);
-  const { toggleThem } = useActions();
+  const { setTheme } = useActions();
+
+  const handleChange = () => {
+    const theme = themeType === ThemeEnum.light ? darkTheme : lightTheme;
+    setTheme(theme);
+    localStorage.setItem("themeType", theme.type);
+  };
+
   return (
     <>
       <SwitchInput
@@ -14,7 +21,7 @@ export const ThemeToggle: React.FC = () => {
         data-testid={"theme-toggle"}
         type="checkbox"
         checked={themeType === ThemeEnum.light}
-        onChange={() => toggleThem()}
+        onChange={handleChange}
       />
       <SwitchLabel htmlFor={"theme-toggle"}>
         <SwitchButton />

@@ -1,5 +1,5 @@
-import { Theme } from "types/themeType";
 import { DefaultTheme } from "styled-components";
+import { Theme } from "types/themeType";
 
 export enum ThemeEnum {
   light = "light",
@@ -8,11 +8,11 @@ export enum ThemeEnum {
 
 export const baseTheme: Theme = {
   colors: {
-    grey: "#c4c4c4",
+    grey: "rgba(196, 196, 196, 1)",
     lightGrey: "rgba(0, 0, 0, 0.1)",
     orange: "rgba(255, 138, 0, 1)",
-    black: "#000",
-    white: "#fff",
+    black: "rgb(0, 0, 0)",
+    white: "rgb(255, 255, 255)",
   },
 
   borders: {
@@ -36,19 +36,19 @@ export const lightTheme: DefaultTheme = {
 
   colors: {
     ...baseTheme.colors,
-    bg: "#fff",
-    font: "#000",
-    border: "#c4c4c4",
+    bg: "rgba(255, 255, 255, 1)",
+    font: "rgba(0, 0, 0, 1)",
+    border: "rgba(196, 196, 196, 1)",
 
     tab: {
       default: {
         bg: "rgba(0, 0, 0, 0.1)",
-        font: "#000",
+        font: "rgba(0, 0, 0, 1)",
       },
 
       active: {
-        bg: "#000",
-        font: "#fff",
+        bg: "rgba(0, 0, 0)",
+        font: "rgba(255, 255, 255, 1)",
       },
     },
   },
@@ -60,18 +60,18 @@ export const darkTheme: DefaultTheme = {
 
   colors: {
     ...baseTheme.colors,
-    bg: "#1b1b1d",
-    font: "#fff",
-    border: "#35363a",
+    bg: "rgba(27, 27, 29, 1)",
+    font: "rgba(255, 255, 255, 1)",
+    border: "rgba(53, 54, 58, 1)",
     tab: {
       default: {
-        bg: "#272729",
-        font: "#fff",
+        bg: "rgba(39, 39, 41, 1)",
+        font: "rgba(255, 255, 255, 1)",
       },
 
       active: {
-        bg: "#000",
-        font: "#fff",
+        bg: "rgba(0, 0, 0, 1)",
+        font: "rgba(255, 255, 255, 1)",
       },
     },
   },

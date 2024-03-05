@@ -1,4 +1,3 @@
-import React from "react";
 import { useActions } from "utils/hooks";
 import { StyledButton } from "./styled";
 interface ShowMoreBtnProps {
@@ -12,7 +11,7 @@ export const ShowMoreBtn: React.FC<ShowMoreBtnProps> = ({ pageToken }) => {
     changePage(pageToken);
   };
   return (
-    <StyledButton data-testid="show-more" onClick={handleClick}>
+    <StyledButton data-testid="show-more" onClick={handleClick} role="button">
       Show More
     </StyledButton>
   );

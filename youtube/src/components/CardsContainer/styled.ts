@@ -11,9 +11,11 @@ export const StyledCardsContainer = styled.div`
 
   margin: 0 auto;
   padding-bottom: 38px;
+
   @media ${({ theme }) => theme.media.large} {
     grid-template-columns: repeat(2, minmax(260px, 500px));
   }
+
   @media ${({ theme }) => theme.media.extasmall} {
     grid-template-columns: repeat(1, 100%);
   }

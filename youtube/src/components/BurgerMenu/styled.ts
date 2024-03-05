@@ -1,12 +1,14 @@
-import { ThemeEnum } from "components/styled/Theme";
 import { styled } from "styled-components";
+import { flex } from "components/styled/Mixin";
+import { ThemeEnum } from "components/styled/Theme";
 
 export const BurgerIconContainer = styled.div`
   width: 100%;
   display: none;
   justify-content: end;
+
   @media ${({ theme }) => theme.media.small} {
-    display: flex;
+    ${flex({ jc: "flex-end" })}
   }
 `;
 
@@ -46,15 +48,19 @@ export const BurgerIcon = styled.div<{ $isOpen: boolean }>`
   & span:first-child,
   & span:last-child {
     background-color: ${({ $isOpen, theme }) =>
-      $isOpen ? "red" : theme.type === ThemeEnum.dark ? theme.colors.orange : theme.colors.black};
+      $isOpen
+        ? "rgba(255, 0, 0, 1)"
+        : theme.type === ThemeEnum.dark
+          ? theme.colors.orange
+          : theme.colors.black};
   }
 `;
 
 export const BurgerMenuContent = styled.div<{ $isOpen: boolean }>`
-  width: ${({ $isOpen }) => ($isOpen ? "80vw" : "0")};
-
+  width: ${({ $isOpen }) => ($isOpen ? "80%" : "0")};
   height: 100vh;
-  display: flex;
+
+  ${flex({ ai: "normal" })}
 
   background: ${({ theme }) => theme.colors.bg};
 

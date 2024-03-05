@@ -1,7 +1,6 @@
-import React from "react";
-import { Video } from "types/api";
-import { VidoList } from "components/CardsList/VideosList";
 import { SkeletonList } from "components/CardsList/SleketonList";
+import { VidoList } from "components/CardsList/VideosList";
+import { Video } from "types/api";
 import { StyledCardsContainer } from "./styled";
 
 interface CardsContainerProps {

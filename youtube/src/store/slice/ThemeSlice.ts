@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ThemeEnum, darkTheme, lightTheme } from "components/styled/Theme";
 import { DefaultTheme } from "styled-components";
+import { darkTheme, lightTheme, ThemeEnum } from "components/styled/Theme";
 
 const initialState: { theme: DefaultTheme } = {
-  theme: lightTheme,
+  theme: localStorage.getItem("themeType") === ThemeEnum.dark ? darkTheme : lightTheme,
 };
 
 export const ThemeSlice = createSlice({
   name: "theme",
   initialState,
   reducers: {
-    toggleThem: (state) => {
-      state.theme = state.theme.type === ThemeEnum.light ? darkTheme : lightTheme;
+    setTheme: (state, action) => {
+      state.theme = action.payload;
     },
   },
   selectors: {
@@ -20,7 +20,7 @@ export const ThemeSlice = createSlice({
   },
 });
 
-export const { toggleThem } = ThemeSlice.actions;
+export const { setTheme } = ThemeSlice.actions;
 export const { getTheme, getThemeType } = ThemeSlice.selectors;
 
 export default ThemeSlice.reducer;

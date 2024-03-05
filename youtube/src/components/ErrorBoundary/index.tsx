@@ -1,6 +1,5 @@
-import React from "react";
-import { ErrorInfo, ReactNode } from "react";
-import { Title2, Text } from "components/styled";
+import React, { ErrorInfo, ReactNode } from "react";
+import { Text, Title2 } from "components/styled";
 
 interface ErrorBoundaryProps {
   children?: ReactNode;

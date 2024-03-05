@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledWrapper } from "./styled";
 
 interface WrapperProps {

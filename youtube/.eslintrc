@@ -6,7 +6,8 @@
       "plugin:@typescript-eslint/recommended",
       "prettier",
       "plugin:react-hooks/recommended",
-      "plugin:prettier/recommended"
+      "plugin:prettier/recommended",
+      "plugin:cypress/recommended"
     ],
     "env": {
       "browser": true,
@@ -22,14 +23,14 @@
     }
     },
     "plugins": [
-      "@babel"
-      , "react", "prettier", "react-hooks"
+      "@babel", "react", "prettier", "react-hooks", "cypress", "simple-import-sort"
     ],
     "rules": {
       "comma-dangle": "off",
       "@typescript-eslint/comma-dangle": ["off", "only-multiline"],
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
+      "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
       "react/display-name": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
@@ -41,7 +42,24 @@
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/no-var-reqiures": "off",
-      "react/react-in-jsx-scope": "off"
+      "no-console": "error",
+      "no-inline-comments": "error",
+      "simple-import-sort/imports": [
+        "error",
+        {
+          "groups": [
+            ["^react", "^@?\\w",
+            "^(pages)(/.*|$)",
+            "^(components)(/.*|$)", 
+            "^(store)(/.*|$)",
+            "^(constants)(/.*|$)",
+            "^(utils)(/.*|$)",
+            "^(types)(/.*|$)",
+            "^(assets)(/.*|$)",
+            "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
+          ]
+        }
+      ]
     },
     "settings": {
       "react": {

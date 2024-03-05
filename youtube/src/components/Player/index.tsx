@@ -1,4 +1,3 @@
-import React from "react";
 import { PlayerContainer } from "./styled";
 
 interface PlayerProps {

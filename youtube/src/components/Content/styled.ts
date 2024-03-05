@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { flex } from "components/styled";
 
 export const ContentContainer = styled.section`
   width: 100%;
   min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  ${flex({ fd: "column", jc: "center" })}
+
   padding-top: 28px;
+
   @media ${({ theme }) => theme.media.small} {
     padding-top: 50px;
   }
