@@ -7,7 +7,7 @@
     "start": "webpack serve --env mode=development",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
-    "eslint": "eslint --ext .tsx --ext .ts src/",
+    "eslint": "eslint --ext .tsx --ext .ts src/", 
     "eslint:fix": "eslint --ext .tsx --ext .ts src/ --fix",
     "prettier": "prettier --ext .tsx --ext .ts src/ --check",
     "test:jest": "jest",
