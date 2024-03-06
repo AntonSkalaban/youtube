@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --env mode=development",
-    "build:dev": "webpack --env mode=development",
-    "build:prod": "webpack --env mode=production",
+    "start": "webpack serve --config webpack.dev.js",
+    "build:prod":  "webpack --config webpack.prod.js",
     "eslint": "eslint --ext .tsx --ext .ts src/",
     "eslint:fix": "eslint --ext .tsx --ext .ts src/ --fix",
     "prettier": "prettier --ext .tsx --ext .ts src/ --check",
