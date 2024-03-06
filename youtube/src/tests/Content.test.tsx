@@ -59,7 +59,7 @@ afterAll(() => server.close());
 
 const theme = lightTheme;
 
-test("fetches & receives a user after clicking the fetch user button", async () => {
+test("get videos after clicking the show more button", async () => {
   const { getAllByTestId, findAllByTestId, queryByText, findByTestId } = renderWithProviders(
     <ThemeProvider theme={theme}>
       <Content />

@@ -26,7 +26,7 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ value, han
   return (
     <>
       {isOpen && (
-        <SearchSuggestionsContainer ref={ref} data-testid="search-Suggestions">
+        <SearchSuggestionsContainer ref={ref} data-testid="search-tips">
           <ul>
             {possibleNames.map((name) => {
               return (
